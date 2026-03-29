@@ -11,7 +11,7 @@ const projects = [
       "Designing AI-Assisted Interaction Concepts for Collaborative Scientific Work",
     description:
       "Integrated an AI-powered voice assistant into an Electronic Laboratory Notebook (ELN) to enable hands-free documentation for scientists.",
-    image: "/images/project1.jpg",
+    image: "/images/master-thesis.png",
     tags: [
       "Figma",
       "Information Architecture",
@@ -30,7 +30,7 @@ const projects = [
       "Human Factors for Software Engineering & Human-System Interaction at DLR",
     description:
       "Conducting human-centered research on collaborative and data-driven interactive systems.",
-    image: "/images/project2.jpg",
+    image: "/images/professional-work.png",
     tags: [
       "HCI",
       "Aerospace",
@@ -48,9 +48,36 @@ const projects = [
     title: "Immersive Interaction Research & Prototyping",
     description:
       "Exploring user presence, spatial perception, and interaction metaphors in VR/AR.",
-    image: "/images/project3.jpg",
+    image: "/images/academic-research.png",
     tags: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing"],
   },
+  {
+    id: "fintech-product-suite",
+    type: "PROFESSIONAL WORK",
+    year: "2021",
+    title: "Fintech Product Suite",
+    description: "Designed comprehensive fintech solutions including a mobile wallet application and corporate banking dashboard for the Egyptian market.",
+    image: "/images/fintech-product.png",
+    tags: ["Fintech", "Mobile Design", "Web Dashboard", "Design Systems", "Figma", "UI/UX"]
+  },
+  {
+    id: "design-for-fiction",
+    type: "ACADEMIC SEMINAR @ UNI SIEGEN",
+    year: "2023",
+    title: "Design for Fiction: Speculative Futures",
+    description: "A speculative design project exploring the ethical implications of future neuro-interfaces through diegetic prototyping and fictional narratives.",
+    image: "/images/design-fiction.png",
+    tags: ["Speculative Design", "Design Fiction", "Storytelling", "Video Production", "Critical Theory"]
+  },
+  {
+    id: "protrack-athlete-performance",
+    type: "PERSONAL PROJECT",
+    year: "2022",
+    title: "ProTrack: Athlete Performance Analytics",
+    description: "A mobile application designed for elite athletes to track biomechanical data and recovery metrics in real-time.",
+    image: "/images/protrack.png",
+    tags: ["Mobile App", "Data Visualization", "Sports Tech", "iOS", "Dark Mode UI"]
+  }
 ];
 
 export default function ProjectsSection() {

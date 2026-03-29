@@ -10,7 +10,7 @@ export default function SelectedWork() {
             description:
                 "Integrated an AI-powered voice assistant into an Electronic Laboratory Notebook (ELN) to enable hands-free documentation for scientists.",
             tags: ["Figma", "FigJam", "Information Architecture"],
-            image: "/project1.jpg",
+            image: "/images/master-thesis.png",
         },
         {
             title:
@@ -19,7 +19,7 @@ export default function SelectedWork() {
             description:
                 "Conducting human-centered research on collaborative and data-driven interactive systems within the Institute of Software Technology.",
             tags: ["HCI", "Aerospace", "Heuristics"],
-            image: "/project2.jpg",
+            image: "/images/professional-work.png",
         },
         {
             title: "Immersive Interaction Research & Prototyping",
@@ -27,7 +27,7 @@ export default function SelectedWork() {
             description:
                 "A collection of research projects investigating user presence, spatial perception, and interaction metaphors in virtual and augmented reality.",
             tags: ["Unity", "C#", "VR/AR"],
-            image: "/project3.jpg",
+            image: "/images/academic-research.png",
         },
     ];
 
