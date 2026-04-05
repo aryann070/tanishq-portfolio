@@ -1,3 +1,5 @@
+import { icons } from "lucide-react";
+
 export const projects = [
   {
     id: "ai-interaction",
@@ -10,19 +12,25 @@ export const projects = [
 
     role: "Student",
     team: "Prof. Robin Neuhaus (Supervisor)",
-
+    icons: ["/icons/mic.png", "/icons/brain.png", "/icons/database.png"],
     tools: [
       "Figma",
       "FigJam",
       "Information Architecture",
       "MAXQDA",
       "NASA-TLX",
+      "TiA (Trust in Automation)",
+      "SUS",
+      "Heuristic Evaluation",
+      "Ethnography",
       "UI/UX",
       "AI Chatbot",
+      "AI Voice Assistant",
       "Qualitative & Quantitative Data",
+      "Overleaf",
+      "LaTeX"
     ],
-
-    prototype: "#",
+    prototype: "https://uni-siegen-masterthesis-1785236.figma.site/",
     outcomes: [
       "A structured set of user needs and design requirements for AI-assisted ELNs",
       "A conceptual prototype illustrating voice interaction and conversational AI",
@@ -34,7 +42,7 @@ export const projects = [
   },
   {
     id: "human-factors-dlr",
-    category: "PROFESSIONAL WORK @ DLR",
+    category: "Professional Work @ DLR",
     year: "2024 - Present",
     title: "Human Factors for Software Engineering & Human-System Interaction at DLR",
     subtitle: "Intelligent Distributed Systems & Software Technology",
@@ -42,6 +50,7 @@ export const projects = [
     image: "/images/professional-work.png",
     role: "Research Assistant",
     team: null,
+    icons: ["/icons/world.png", "/icons/brain.png"],
     prototype: null,
     tools: [
       "HCI",
@@ -73,7 +82,7 @@ export const projects = [
   },
   {
     id: "immersive-research",
-    category: "ACADEMIC RESEARCH @ UNI SIEGEN",
+    category: "Academic Research @ Uni Siegen",
     year: "2022 - 2023",
     title: "Immersive Interaction Research & Prototyping",
     subtitle: "VR Meditation, Spatial Perception & Interaction Paradigms",
@@ -81,6 +90,7 @@ export const projects = [
     image: "/images/academic-research.png",
     role: "Student",
     team: null,
+    icons: ["/icons/glasses.png", "/icons/layers.png", "/icons/monitor.png"],
     prototype: null,
     tools: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing", "User Testing"],
     outcomes: [
@@ -101,20 +111,20 @@ export const projects = [
         title: "Zensis: VR Meditation",
         description: "Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user.",
         type: "video",
-        url: "https://your-video-link.com",
+        url: "https://www.behance.net/embed/project/190876541",
       },
       {
         title: "OVR Lap: Multi-Location Perception",
         description: "Investigated the theoretical limits of spatial awareness by proposing a 'multi-view' VR interface. The project visualized how users might monitor and interact with two distinct virtual environments simultaneously.",
         type: "prototype",
-        url: "#",
+        url: "https://www.behance.net/gallery/202737945/Poster-on-the-research-paper-OVRLAP-perc",
         label: "View Behance Poster",
       },
     ],
   },
   {
     id: "fintech-product-suite",
-    category: "PROFESSIONAL WORK",
+    category: "Professional Work",
     year: "2021",
     title: "Fintech Product Suite",
     subtitle: "The Pioneers Solutions, Egypt",
@@ -124,6 +134,7 @@ export const projects = [
     team: null,
     prototype: null,
     tools: ["Fintech", "Mobile Design", "Web Dashboard", "Design Systems", "Figma", "UI/UX"],
+    icons: ["/icons/phone.png", "/icons/card.png"],
     outcomes: [
       "Delivered high-fidelity prototypes for both mobile and web platforms",
       "Established a scalable design system for future fintech products",
@@ -135,21 +146,21 @@ export const projects = [
         title: "YouPay Mobile Wallet",
         description: "A user-friendly mobile wallet designed for seamless daily transactions, bill payments, and peer-to-peer transfers.",
         type: "prototype",
-        url: "#",
+        url: " https://www.behance.net/gallery/174355697/YouPay-Fintech-POS-Application",
         label: "View YouPay on Behance",
       },
       {
         title: "SATApay Corporate Dashboard",
         description: "A data-used analytics dashboard for businesses to monitor accounts, generate reports, and manage payroll.",
         type: "prototype",
-        url: "#",
+        url: "https://www.behance.net/gallery/163587699/E-wallet-Mobile-Application-SataPay",
         label: "View SATApay on Behance",
       },
     ],
   },
   {
     id: "design-for-fiction",
-    category: "ACADEMIC SEMINAR @ UNI SIEGEN",
+    category: "Academic Seminar @ Uni Siegen",
     year: "2023",
     title: "Design for Fiction: Speculative Futures",
     subtitle: "Critical Design & Diegetic Prototyping",
@@ -159,6 +170,7 @@ export const projects = [
     team: null,
     prototype: null,
     tools: ["Speculative Design", "Design Fiction", "Storytelling", "Video Production", "Critical Theory"],
+    icons: ["/icons/bulb.png", "/icons/film.png", "/icons/brain.png"],
     outcomes: [
       "Produced a high-quality short film illustrating the diegetic prototype in use",
       "Created a suite of supporting artifacts (print ads, packaging, digital interface mockups)",
@@ -183,7 +195,7 @@ export const projects = [
   },
   {
     id: "protrack-athlete-performance",
-    category: "PERSONAL PROJECT",
+    category: "Personal Project",
     year: "2022",
     title: "ProTrack: Athlete Performance Analytics",
     subtitle: "Data-Driven Training Interface",
@@ -193,6 +205,7 @@ export const projects = [
     team: null,
     prototype: null,
     tools: ["Mobile App", "Data Visualization", "Sports Tech", "iOS", "Dark Mode UI"],
+    icons: ["/icons/graph.png", "/icons/phone.png", "/icons/thunder.png"],
     outcomes: [
       "Designed 25+ screens covering the core user flow",
       "Created a custom icon set for biomechanical metrics",

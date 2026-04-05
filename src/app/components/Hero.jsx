@@ -1,6 +1,9 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 export default function Hero() {
     return (
-       <section className="relative w-full min-h-screen flex items-start pt-10 bg-gradient-to-r from-[#0b1a3a] via-[#07122b] to-[#030814] text-white px-6">
+        <section className="relative w-full min-h-screen flex items-start pt-10 bg-gradient-to-r from-[#0b1a3a] via-[#07122b] to-[#030814] text-white px-6">
 
             <div className="w-full">
 
@@ -18,7 +21,9 @@ export default function Hero() {
                         Human-System
                     </span>
                     <br />
-                    Interaction
+                    <span className="bg-indigo-300 bg-clip-text text-transparent">
+                        Interaction
+                    </span>
                 </h1>
 
                 {/* Description */}
@@ -32,9 +37,16 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="mt-8 flex gap-4">
-                    <button className="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition">
-                        View Work →
-                    </button>
+
+                    <Link href="/projects">
+                        <button className="group px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition flex items-center gap-2">
+                            View Work
+                            <ArrowRight
+                                size={18}
+                                className="transition-transform group-hover:translate-x-1"
+                            />
+                        </button>
+                    </Link>
 
                     <button className="px-6 py-3 rounded-full border border-white/20 hover:border-white/40 transition">
                         Get in Touch
@@ -43,7 +55,7 @@ export default function Hero() {
             </div>
 
             {/* Subtle divider line (optional) */}
-            <div className="absolute right-1/3 top-1/4 h-40 w-px bg-white/10 hidden lg:block" />
+            {/* <div className="absolute right-1/3 top-1/4 h-40 w-px bg-white/10 hidden lg:block" /> */}
         </section>
     );
 }

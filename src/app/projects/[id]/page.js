@@ -1,5 +1,5 @@
 import { projects } from "@/app/data/projects";
-import { BsFileText, BsBoxArrowUpRight, BsCheckCircle } from "react-icons/bs";
+import { BsFileEarmarkText, BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft } from "react-icons/bs";
 import Link from "next/link";
 
 export default async function ProjectDetail({ params }) {
@@ -12,18 +12,26 @@ export default async function ProjectDetail({ params }) {
   }
 
   return (
-    <section className="bg-[#f5f7fb] min-h-screen px-6 md:px-16 lg:px-24 py-12">
+    <section className="bg-[#f5f7fb] min-h-screen px-6 md:px-16 lg:px-8 py-12">
 
       {/* Back */}
-      <Link href="/projects" className="text-sm text-gray-500 hover:underline">
-        ← Back to All Projects
+      <Link
+        href="/projects"
+        className="flex items-center gap-2 text-base text-gray-500 hover:text-blue-600 transition"
+      >
+        <BsArrowLeft size={14} />
+        Back to All Projects
       </Link>
 
       {/* Header */}
       <div className="mt-6 max-w-5xl">
-        <p className="text-sm text-blue-600 font-medium">
-          {project.category} | {project.year}
-        </p>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="bg-blue-100 text-blue-600 font-semibold px-3 py-0.5 rounded-full">
+            {project.category}
+          </span>
+          <span className="text-gray-400">|</span>
+          <span className="text-gray-500 font-semibold">{project.year}</span>
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold text-[#0f172a] mt-3 leading-[1.15]">
           {project.title}
         </h1>
@@ -66,79 +74,95 @@ export default async function ProjectDetail({ params }) {
           )}
         </div>
 
-  
+
 
 
         {/* RIGHT SIDE */}
         <div className="md:col-span-2">
-          <div className="bg-gray-100 rounded-xl h-12 mb-6 flex items-center px-4 gap-3">
-            <div className="w-6 h-6 bg-white rounded-full border" />
-            <div className="w-6 h-6 bg-white rounded-full border" />
-            <div className="w-6 h-6 bg-white rounded-full border" />
-          </div>
-
-           {/* Sub Projects Cards */}
-        {project.subProjects?.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            {project.subProjects.map((sub, i) => (
-              <div key={i} className="bg-white rounded-2xl border p-5 shadow-sm flex flex-col justify-between">
-
-                {/* Title & Description */}
-                <div>
-                  <h3 className="font-semibold text-[#0f172a] text-sm leading-snug mb-3">
-                    {sub.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">
-                    {sub.description}
-                  </p>
-                </div>
-
-                {/* Bottom — conditional */}
-                <div className="mt-4">
-
-                  {/* Report Button */}
-                  {sub.type === "report" && (
-                    <a
-                      href={sub.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xs text-gray-600 bg-gray-100 hover:bg-gray-200 transition px-3 py-2 rounded-lg w-fit"
-                    >
-                      {sub.label}
-                      <BsFileText size={13} />
-                    </a>
-                  )}
-
-                  {/* Video Box */}
-                  {sub.type === "video" && (
-                    <div className="w-full aspect-video bg-[#0f172a] rounded-lg overflow-hidden">
-                      <iframe
-                        src={sub.url}
-                        className="w-full h-full"
-                        allowFullScreen
-                        title={sub.title}
-                      />
-                    </div>
-                  )}
-
-                  {/* Prototype / External Link Button */}
-                  {sub.type === "prototype" && (
-                    <a
-                      href={sub.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xs text-white bg-blue-600 hover:bg-blue-700 transition px-3 py-2 rounded-lg w-fit"
-                    >
-                      {sub.label}
-                      <BsBoxArrowUpRight size={13} />
-                    </a>
-                  )}
-
-                </div>
+          <div className="bg-gray-100 h-14 mb-6 flex items-center gap-4 px-4 rounded-full">
+            {project.icons?.map((icon, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center"
+              >
+                <img
+                  src={icon}
+                  alt="tech icon"
+                  className="w-10 h-10 object-contain"
+                />
               </div>
             ))}
           </div>
-        )}
+
+          {/* Sub Projects Cards */}
+          {project.subProjects?.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              {project.subProjects.map((sub, i) => (
+                <div key={i} className="bg-white rounded-2xl border p-5 shadow-sm flex flex-col justify-between">
+
+                  {/* Title & Description */}
+                  <div>
+                    <h3 className="font-semibold text-[#0f172a] text-sm leading-snug mb-3">
+                      {sub.title}
+                    </h3>
+                    <p className="text-gray-500 text-xs leading-relaxed">
+                      {sub.description}
+                    </p>
+                  </div>
+
+                  {/* Bottom — conditional */}
+                  <div className="mt-4">
+
+                    {/* Report Button */}
+                    {sub.type === "report" && (
+                      <div className="w-full">
+                        <a
+                          href={sub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 w-full font-medium text-sm text-black bg-gray-100 hover:bg-gray-200 transition px-5 py-3 rounded-lg"
+                        >
+                          {sub.label}
+                          <BsFileEarmarkText size={16} />
+                        </a>
+                      </div>
+                    )}
+
+                    {/* Video Box */}
+                    {sub.type === "video" && (
+                      <div className="w-full aspect-video bg-[#0f172a] rounded-lg overflow-hidden">
+                        <div className="w-[103%] h-[103%] -ml-[1.5%] -mt-[1.5%]">
+                          <iframe
+                            src={sub.url}
+                            className="w-full h-full border-0"
+                            scrolling="no"
+                            allowFullScreen
+                            title={sub.title}
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Prototype / External Link Button */}
+                    {sub.type === "prototype" && (
+                      <div className="w-full">
+                        <a
+                          href={sub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 w-full text-sm text-white bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg"
+                        >
+                          {sub.label}
+                          <BsBoxArrowUpRight size={16} />
+                        </a>
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
           <h2 className="text-xl font-semibold text-[#0f172a] mb-4">Key Outcomes</h2>
           <ul className="space-y-4">
