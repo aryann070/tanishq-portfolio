@@ -76,7 +76,6 @@ export default async function ProjectDetail({ params }) {
 
 
 
-
         {/* RIGHT SIDE */}
         <div className="md:col-span-2">
           <div className="bg-gray-100 h-14 mb-6 flex items-center gap-4 px-4 rounded-full">
@@ -164,15 +163,39 @@ export default async function ProjectDetail({ params }) {
             </div>
           )}
 
-          <h2 className="text-xl font-semibold text-[#0f172a] mb-4">Key Outcomes</h2>
+       
+            <div className="max-w-5xl">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                The Challenge
+              </h2>
+
+              <p className="text-gray-700 leading-relaxed text-lg  mb-12">
+                {project.challenges}
+              </p>
+            </div>
+
+              <div className="max-w-5xl">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Approach & Solution
+              </h2>
+
+              <p className="text-gray-700 leading-relaxed text-lg  mb-12">
+                {project.approach}
+              </p>
+            </div>
+        
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
           <ul className="space-y-4">
             {project.outcomes?.map((item, i) => (
               <li key={i} className="flex gap-3">
                 <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
-                <p className="text-gray-600 leading-relaxed">{item}</p>
+                <p className="text-gray-700 leading-relaxed text-lg">{item}</p>
               </li>
             ))}
           </ul>
+
+
         </div>
       </div>
     </section>

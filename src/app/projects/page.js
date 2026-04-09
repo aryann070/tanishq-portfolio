@@ -29,73 +29,75 @@ const projects = [
       "Overleaf",
       "LaTeX"
     ],
+    approach: "The project started with understanding the requirements and defining clear objectives. A proper plan and system design were created to ensure smooth development. Suitable technologies were selected based on project needs. The implementation was carried out using modular and efficient coding practices. After development, thorough testing and debugging were performed to fix issues and improve performance. Finally, the project was deployed and monitored for stability.",
+    challenges: "One of the major challenges was handling API failures and preventing application crashes. Performance optimization was also important to ensure smooth user experience. Ensuring scalability for handling larger data and users was another difficulty. Security concerns such as preventing unauthorized access and vulnerabilities had to be addressed carefully. Additionally, managing real-time data updates without inconsistencies was a challenging task.",
   },
-  {
-    id: "human-factors-dlr",
+{
+  id: "human-factors-dlr",
     type: "PROFESSIONAL WORK @ DLR",
-    year: "2024 - Present",
-    title:
-      "Human Factors for Software Engineering & Human-System Interaction at DLR",
+      year: "2024 - Present",
+        title:
+  "Human Factors for Software Engineering & Human-System Interaction at DLR",
     description:
-      "Conducting human-centered research on collaborative and data-driven interactive systems.",
+  "Conducting human-centered research on collaborative and data-driven interactive systems.",
     image: "/images/professional-work.png",
-    tags: [
-      "HCI",
-      "Aerospace",
-      "Heuristics",
-      "Figma",
-      "Vibe Coding",
-      "Conceptboard",
-      "Miro",
-      "FigJam",
-      "Research Presentation",
-      "LaTeX",
-      "Overleaf",
-      "Quantitative Methods",
-      "Qualitative Methods",
-      "MAXQDA",
-      "SPSS",
-      "Tableau",
-      "Data Visualization",
-    ],
+      tags: [
+        "HCI",
+        "Aerospace",
+        "Heuristics",
+        "Figma",
+        "Vibe Coding",
+        "Conceptboard",
+        "Miro",
+        "FigJam",
+        "Research Presentation",
+        "LaTeX",
+        "Overleaf",
+        "Quantitative Methods",
+        "Qualitative Methods",
+        "MAXQDA",
+        "SPSS",
+        "Tableau",
+        "Data Visualization",
+      ],
   },
-  {
-    id: "immersive-research",
+{
+  id: "immersive-research",
     type: "ACADEMIC RESEARCH @ UNI SIEGEN",
-    year: "2022 - 2023",
-    title: "Immersive Interaction Research & Prototyping",
-    description:
-      "Exploring user presence, spatial perception, and interaction metaphors in VR/AR.",
+      year: "2022 - 2023",
+        title: "Immersive Interaction Research & Prototyping",
+          description:
+  "Exploring user presence, spatial perception, and interaction metaphors in VR/AR.",
     image: "/images/academic-research.png",
-    tags: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing","User Testing"],
+      tags: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing", "User Testing"],
   },
-  {
-    id: "fintech-product-suite",
+{
+  id: "fintech-product-suite",
     type: "PROFESSIONAL WORK",
-    year: "2021",
-    title: "Fintech Product Suite",
-    description: "Designed comprehensive fintech solutions including a mobile wallet application and corporate banking dashboard for the Egyptian market.",
-    image: "/images/fintech-product.png",
-    tags: ["Fintech", "Mobile Design", "Web Dashboard", "Design Systems", "Figma", "UI/UX"]
-  },
-  {
-    id: "design-for-fiction",
+      year: "2021",
+        title: "Fintech Product Suite",
+          description: "Designed comprehensive fintech solutions including a mobile wallet application and corporate banking dashboard for the Egyptian market.",
+            image: "/images/fintech-product.png",
+              tags: ["Fintech", "Mobile Design", "Web Dashboard", "Design Systems", "Figma", "UI/UX"]
+},
+{
+  id: "design-for-fiction",
     type: "ACADEMIC SEMINAR @ UNI SIEGEN",
-    year: "2023",
-    title: "Design for Fiction: Speculative Futures",
-    description: "A speculative design project exploring the ethical implications of future neuro-interfaces through diegetic prototyping and fictional narratives.",
-    image: "/images/design-fiction.png",
-    tags: ["Speculative Design", "Design Fiction", "Storytelling", "Video Production", "Critical Theory"]
-  },
-  {
-    id: "protrack-athlete-performance",
+      year: "2023",
+        title: "Design for Fiction: Speculative Futures",
+          description: "A speculative design project exploring the ethical implications of future neuro-interfaces through diegetic prototyping and fictional narratives.",
+            image: "/images/design-fiction.png",
+              tags: ["Speculative Design", "Design Fiction", "Storytelling", "Video Production", "Critical Theory"]
+},
+{
+  id: "protrack-athlete-performance",
     type: "PERSONAL PROJECT",
-    year: "2022",
-    title: "ProTrack: Athlete Performance Analytics",
-    description: "A mobile application designed for elite athletes to track biomechanical data and recovery metrics in real-time.",
-    image: "/images/protrack.png",
-    tags: ["Mobile App", "Data Visualization", "Sports Tech", "iOS", "Dark Mode UI"]
-  }
+      year: "2022",
+        title: "ProTrack: Athlete Performance Analytics",
+          description: "A mobile application designed for elite athletes to track biomechanical data and recovery metrics in real-time.",
+            image: "/images/protrack.png",
+              tags: ["Mobile App", "Data Visualization", "Sports Tech", "iOS", "Dark Mode UI"]
+}
 ];
 
 export default function ProjectsSection() {
