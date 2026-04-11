@@ -37,7 +37,7 @@ export default function SelectedWork() {
 
     return (
         <section className="w-full bg-[#f5f7fb] py-20 px-6">
-            <div className="w-full mx-auto">
+            <div className="w-full max-w-7xl mx-auto">
 
                 {/* Header */}
                 <div className="flex items-center justify-between mb-12">
@@ -67,7 +67,7 @@ export default function SelectedWork() {
                             href={`/projects/${project.id}`}
                             className="block h-full"
                         >
-                            <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100 hover:scale-[1.02] cursor-pointer h-full flex flex-col">
+                            <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
 
                                 {/* Image */}
                                 <div className="relative w-full h-56 flex-shrink-0">

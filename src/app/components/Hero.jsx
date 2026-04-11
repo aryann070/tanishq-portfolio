@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex items-start pt-10 bg-gradient-to-r from-[#0b1a3a] via-[#07122b] to-[#030814] text-white px-6">
+        <section className="relative w-full min-h-screen flex items-start pt-16 bg-gradient-to-r from-[#0b1a3a] via-[#07122b] to-[#030814] text-white px-6 md:px-16 lg:px-24">
 
-            <div className="w-full">
+            <div className="w-full max-w-7xl mx-auto">
 
                 {/* Badge */}
                 <div className="mb-6">
@@ -37,7 +37,6 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="mt-8 flex gap-4">
-
                     <Link href="/projects">
                         <button className="group px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition flex items-center gap-2">
                             View Work
@@ -53,9 +52,6 @@ export default function Hero() {
                     </button>
                 </div>
             </div>
-
-            {/* Subtle divider line (optional) */}
-            {/* <div className="absolute right-1/3 top-1/4 h-40 w-px bg-white/10 hidden lg:block" /> */}
         </section>
     );
 }
