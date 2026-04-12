@@ -1,5 +1,9 @@
 import { projects } from "@/app/data/projects";
-import { BsFileEarmarkText, BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft } from "react-icons/bs";
+import {
+  BsFileEarmarkText, BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft,
+  BsLayers,
+  BsEye,
+} from "react-icons/bs";
 import Link from "next/link";
 
 export default async function ProjectDetail({ params }) {
@@ -184,6 +188,112 @@ export default async function ProjectDetail({ params }) {
               </p>
             </div>
 
+            {/*Research Methodology*/}
+            {project.id === "human-factors-dlr" && project.methodology && (
+              <section className="bg-white max-w-5xl px-10 py-14 rounded-2xl mt-10 mb-12 shadow-md">
+
+                {/* Title */}
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                  Methodology
+                </h2>
+
+                <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+
+                  {/* Research Methods */}
+                  {project.methodology.researchMethods?.length > 0 && (
+                    <div>
+                      <div className="flex items-start gap-3 mb-5">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100">
+                          <BsFileEarmarkText className="text-blue-600" size={18} />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          Research Methods
+                        </h3>
+                      </div>
+
+                      <ul className="space-y-4">
+                        {project.methodology.researchMethods.map((item, i) => (
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                            <BsCheckCircle className="text-blue-500 mt-[2px]" size={16} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Design Process */}
+                  {project.methodology.designProcess?.length > 0 && (
+                    <div>
+                      <div className="flex items-center gap-3 mb-5">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100">
+                          <BsLayers className="text-purple-600" size={18} />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          Design Process
+                        </h3>
+                      </div>
+
+                      <ul className="space-y-4">
+                        {project.methodology.designProcess.map((item, i) => (
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                            <BsCheckCircle className="text-purple-500 mt-[2px]" size={16} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Evaluation Methods */}
+                  {project.methodology.evaluationMethods?.length > 0 && (
+                    <div>
+                      <div className="flex items-center gap-3 mb-5">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-green-100">
+                          <BsCheckCircle className="text-green-600" size={18} />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          Evaluation Methods
+                        </h3>
+                      </div>
+
+                      <ul className="space-y-4">
+                        {project.methodology.evaluationMethods.map((item, i) => (
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                            <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Focus Areas */}
+                  {project.methodology.focusAreas?.length > 0 && (
+                    <div>
+                      <div className="flex items-center gap-3 mb-5">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100">
+                          <BsEye className="text-orange-500" size={18} />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          Focus Areas
+                        </h3>
+                      </div>
+
+                      <ul className="space-y-4">
+                        {project.methodology.focusAreas.map((item, i) => (
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                            <BsCheckCircle className="text-orange-500 mt-[2px]" size={16} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                </div>
+              </section>
+            )}
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
             <ul className="space-y-4">
