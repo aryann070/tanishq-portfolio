@@ -8,7 +8,12 @@ import {
   FaCheckCircle,
   FaBullseye,
 } from "react-icons/fa";
-import { BsCheckCircle } from "react-icons/bs";
+import {
+  BsFileEarmarkText, BsBoxArrowUpRight, BsArrowLeft,
+  BsLayers,
+  BsEye,
+} from "react-icons/bs"
+import { BsCheckCircle, BsFileEarmarkArrowUp } from "react-icons/bs";
 
 const keyoutcomes = [
   "Built a cohesive fictional world with believable systems, narratives, and societal structures",
@@ -19,28 +24,40 @@ const keyoutcomes = [
   "Illustrated how persuasive design can normalize and reinforce authoritarian systems",
   "Framed the project as a speculative cautionary tale on the risks of well-intentioned technological systems",
 ]
+
+const icons = ["/icons/home.png", "/icons/bulb.png", "/icons/film.png"]
+
 export default function DesignPage() {
 
   const [activeTab, setActiveTab] = useState("people");
 
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 py-8">
+  return ( 
+    <div className="bg-[#f5f7fb] text-gray-800 min-h-screen px-6 md:px-16 lg:px-8 py-12">
 
       {/* ✅ Centered Container */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-7xl mx-auto">
 
         {/* 🔙 Back Link */}
-        <Link href="/" className="text-sm text-gray-500 hover:underline">
-          ← Back to All Projects
+        {/* Back */}
+        <Link
+          href="/projects"
+          className="flex items-center gap-2 text-base text-gray-500 hover:text-blue-600 transition"
+        >
+          <BsArrowLeft size={14} />
+          Back to All Projects
         </Link>
 
         {/* 🏷️ Top Meta */}
-        <div className="mt-4 text-sm text-blue-600 font-medium">
-          Academic Seminar @ Uni Siegen | 2023
+        <div className="flex items-center gap-3 mt-4">
+          <span className="bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full">
+            Academic Seminar @ Uni Siegen
+          </span>
+          <span className="text-gray-300 text-lg">|</span>
+          <span className="text-gray-500 text-sm font-semibold">2023</span>
         </div>
 
         {/* 🧠 Title */}
-        <h1 className="text-4xl md:text-5xl font-bold mt-4 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mt-4 leading-tight">
           Design for Fiction: Speculative Futures
         </h1>
 
@@ -80,7 +97,7 @@ export default function DesignPage() {
                 ].map((tool, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-gray-100 px-3 py-1 rounded-full"
+                    className="text-xs bg-gray-100 px-3 py-1 rounded-sm"
                   >
                     {tool}
                   </span>
@@ -91,13 +108,20 @@ export default function DesignPage() {
           </div>
 
           {/* 📄 Right Content */}
-          <div className="md:col-span-2 space-y-6">
-
-            {/* Icons */}
-            <div className="flex gap-3 bg-white rounded-xl shadow-sm p-4 w-fit">
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">🏛️</div>
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">💡</div>
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">📊</div>
+          <div className="md:col-span-2">
+            <div className="bg-gray-100 h-14 mb-6 flex items-center gap-4 px-4 rounded-full">
+              {icons?.map((icon, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center"
+                >
+                  <img
+                    src={icon}
+                    alt="tech icon"
+                    className="w-10 h-10 object-contain"
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Main Text */}
@@ -115,7 +139,7 @@ export default function DesignPage() {
               </p>
 
               {/* Highlight Box */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm">
+              <div className="bg-blue-50 border border-blue-200 border-l-4 border-l-blue-500 rounded-r-lg rounded-l-none p-4 text-sm">
                 <strong>Seminar Credit:</strong> This work was completed as part of the Design Fiction seminar. The approach emphasizes using design fiction as a research method to critically examine technology’s role in society.
               </div>
 
@@ -335,10 +359,12 @@ export default function DesignPage() {
 
                       {/* 🔵 Research Methods */}
                       <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <FaRegFileAlt className="text-blue-500 text-lg" />
-                          <h3 className="font-semibold text-gray-900 text-lg">
-                            Research Methods
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100">
+                            <BsFileEarmarkText className="text-blue-600" size={18} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900">
+                            Design Process
                           </h3>
                         </div>
 
@@ -360,9 +386,11 @@ export default function DesignPage() {
 
                       {/* 🟣 Design Process */}
                       <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <FaLayerGroup className="text-purple-500 text-lg" />
-                          <h3 className="font-semibold text-gray-900 text-lg">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100">
+                            <BsLayers className="text-purple-600" size={18} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900">
                             Design Process
                           </h3>
                         </div>
@@ -385,9 +413,11 @@ export default function DesignPage() {
 
                       {/* 🟢 Evaluation Methods */}
                       <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <FaCheckCircle className="text-green-500 text-lg" />
-                          <h3 className="font-semibold text-gray-900 text-lg">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-green-100">
+                            <BsCheckCircle className="text-green-600" size={18} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900">
                             Evaluation Methods
                           </h3>
                         </div>
@@ -409,9 +439,11 @@ export default function DesignPage() {
 
                       {/* 🟠 Focus Areas */}
                       <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <FaBullseye className="text-orange-500 text-lg" />
-                          <h3 className="font-semibold text-gray-900 text-lg">
+                        <div className="flex items-center gap-3 mb-5">
+                          <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100">
+                            <BsEye className="text-orange-600" size={18} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900">
                             Focus Areas
                           </h3>
                         </div>
