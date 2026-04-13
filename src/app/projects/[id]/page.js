@@ -46,7 +46,7 @@ export default async function ProjectDetail({ params }) {
         <div className="grid md:grid-cols-3 gap-8 mt-12 items-start">
 
           {/* LEFT PANEL */}
-          <div className="bg-white rounded-2xl border p-6 shadow-sm">
+          <div className="bg-white rounded-2xl p-6 shadow-sm">
             <p className="text-xs text-gray-400 uppercase mb-1">My Role</p>
             <p className="text-gray-800 font-medium mb-4">{project.role}</p>
 
