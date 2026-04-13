@@ -16,13 +16,13 @@ import {
 import { BsCheckCircle, BsFileEarmarkArrowUp } from "react-icons/bs";
 
 const keyoutcomes = [
-  "Built a cohesive fictional world with believable systems, narratives, and societal structures",
-  "Designed multi-modal diegetic prototypes including UI interfaces, videos, and narrative artifacts",
-  "Created promotional media that blends storytelling with critical design commentary",
-  "Exposed the duality of usability and control through intentionally designed surveillance-driven interfaces",
-  "Initiated critical discourse on UBI, surveillance capitalism, and autonomy vs. convenience",
-  "Illustrated how persuasive design can normalize and reinforce authoritarian systems",
-  "Framed the project as a speculative cautionary tale on the risks of well-intentioned technological systems",
+  "Developed a comprehensive fictional world with internal consistency and believable details",
+  "Created diegetic prototypes spanning multiple media (interfaces, videos, documents)",
+  "Produced promotional videos that function both as narrative elements and critical commentary",
+  "Designed interfaces that simultaneously demonstrate usability principles and surveillance mechanisms",
+  "Sparked critical discussions about UBI, surveillance capitalism, and the trade-offs between welfare and autonomy",
+  "Demonstrated how persuasive design techniques can normalize authoritarian control",
+  "The project serves as a cautionary tale about well-intentioned systems that enable unprecedented surveillance",
 ]
 
 const icons = ["/icons/home.png", "/icons/bulb.png", "/icons/film.png"]
@@ -31,7 +31,7 @@ export default function DesignPage() {
 
   const [activeTab, setActiveTab] = useState("people");
 
-  return ( 
+  return (
     <div className="bg-[#f5f7fb] text-gray-800 min-h-screen px-6 md:px-16 lg:px-8 py-12">
 
       {/* ✅ Centered Container */}
@@ -125,26 +125,22 @@ export default function DesignPage() {
             </div>
 
             {/* Main Text */}
-            <div className="bg-white rounded-xl shadow-sm p-6 space-y-4 leading-relaxed text-gray-600">
+            <div className="bg-white rounded-xl shadow-sm p-6 space-y-4 leading-relaxed text-gray-500">
               <p>
-                Design fiction is a critical design practice that uses speculative scenarios and diegetic prototypes—artifacts that exist within a fictional world—to explore potential futures and provoke reflection on the social, ethical, and political implications of emerging technologies.
+                Design fiction is a critical design practice that uses speculative scenarios and diegetic prototypes—artifacts that exist within a fictional world—to explore potential futures and provoke reflection on the social, ethical, and political implications of emerging technologies. Rather than solving problems, design fiction asks questions: it makes visible the invisible consequences of technological change and invites us to critically examine the futures we are creating.
               </p>
 
               <p>
-                Rather than solving problems, design fiction asks questions: it makes visible the invisible consequences of technological change and invites us to critically examine the futures we are creating.
-              </p>
-
-              <p>
-                This approach moves beyond traditional user-centered design to engage with broader societal concerns, using storytelling, world-building, and persuasive artifacts to make speculative futures feel tangible and plausible.
+                This approach moves beyond traditional user-centered design to engage with broader societal concerns, using storytelling, world-building, and persuasive artifacts to make speculative futures feel tangible and plausible. Design fiction serves as a tool for critical inquiry, allowing designers to explore "what if" scenarios that challenge assumptions and reveal hidden tensions in our relationship with technology.
               </p>
 
               {/* Highlight Box */}
               <div className="bg-blue-50 border border-blue-200 border-l-4 border-l-blue-500 rounded-r-lg rounded-l-none p-4 text-sm">
-                <strong>Seminar Credit:</strong> This work was completed as part of the Design Fiction seminar. The approach emphasizes using design fiction as a research method to critically examine technology’s role in society.
+                <strong>Seminar Credit:</strong> This work was completed as part of the Design Fiction seminar led by <span className="text-blue-700">Dr. Judith Dörrenbächer</span> at the University of Siegen. Dr. Dörrenbächer's approach emphasizes the use of design fiction as a research method for critically examining technology's role in society and exploring alternative futures through tangible, believable artifacts.
               </div>
 
-              <p>
-                Two complementary design fiction efforts were developed for this seminar, each examining different aspects of technology's impact on society.
+              <p className="font-semibold text-sm text=gray-900">
+                Two complementary design fiction efforts were developed for this seminar, each examining different aspects of technology's impact on society. Select a project below to explore the research, methodology, and outcomes:
               </p>
             </div>
 
@@ -176,14 +172,14 @@ export default function DesignPage() {
 
               {/* 📄 Tab Content */}
               {activeTab === "people" && (
-                <div className="space-y-6">
+                <div className="space-y-4 leading-relaxed">
 
                   {/* 🖼️ Image */}
-                  <div>
+                  <div className="md:-ml-3 ">
                     <img
                       src="/images/design.png"
                       alt="People Who Vanished"
-                      className="overflow-hidden w-full h-[450px] object-fit"
+                      className="overflow-hidden w-full h-[500px] object-fit"
                     />
                   </div>
                   {/* 📝 Content */}
@@ -201,7 +197,7 @@ export default function DesignPage() {
                       offers a unique opportunity to do just that.
                     </p>
 
-                    <p className="font-medium">
+                    <p className="font-semibold">
                       The ladder outlines four stages:
                     </p>
 
@@ -251,7 +247,7 @@ export default function DesignPage() {
                     <h3 className="font-semibold text-gray-900">
                       GOVnet Promotional Video 1
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-500">
                       A persuasive promotional video presenting GOVnet as a utopian solution for digital governance and universal welfare—showcasing the system’s promises while subtly hinting at underlying control mechanisms.
                     </p>
 
@@ -270,7 +266,7 @@ export default function DesignPage() {
                     <h3 className="font-semibold text-gray-900">
                       GOVnet Promotional Video 2
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-500">
                       A second perspective on life within the GOVnet ecosystem, exploring citizen experiences with the UBI system and point-based credit system through narrative storytelling.
                     </p>
 
@@ -289,12 +285,12 @@ export default function DesignPage() {
                     <h3 className="font-semibold text-gray-900">
                       Diegetic Prototype
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-500">
                       Interactive prototype of the GOVnet interface, demonstrating how citizens would interact with the system for daily transactions, welfare management, and civic engagement.
                     </p>
-
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg text-sm font-medium">
-                      Explore Interactive Prototype ↗
+                    <button className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg text-sm font-medium transition">
+                      Explore Interactive Prototype
+                      <BsBoxArrowUpRight size={16} />
                     </button>
                   </div>
 
@@ -303,12 +299,13 @@ export default function DesignPage() {
                     <h3 className="font-semibold text-gray-900">
                       Project Documentation
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-500">
                       Comprehensive documentation of the design fiction process, including world-building rationale, theoretical framework, artifact creation, and critical reflections on methodology.
                     </p>
 
-                    <button className="w-full bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium">
-                      Read Full Report 📄
+                    <button className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition">
+                      Read Full Report
+                      <BsFileEarmarkText size={16} />
                     </button>
                   </div>
                 </div>
@@ -317,7 +314,7 @@ export default function DesignPage() {
                   {/* ⚠️ Challenge */}
                   <div className="space-y-3 mt-12">
                     <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                      Challenge
+                      The Challenge
                     </h3>
 
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
@@ -332,7 +329,7 @@ export default function DesignPage() {
                   {/* 💡 Approach */}
                   <div className="space-y-3">
                     <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                      Approach
+                      Approach & Solution
                     </h3>
 
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
@@ -347,10 +344,10 @@ export default function DesignPage() {
                 </div>
                 <div className="w-full my-16">
 
-                  <div className="bg-white rounded-2xl shadow-md p-6 md:p-10">
+                  <div className="bg-white rounded-2xl shadow-md p-5 md:p-10">
 
                     {/* 🧠 Title */}
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-8">
                       Methodology
                     </h2>
 
@@ -368,7 +365,7 @@ export default function DesignPage() {
                           </h3>
                         </div>
 
-                        <ul className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
                             "Analysis of existing digital government platforms and e-governance systems",
                             "Research into Universal Basic Income proposals and pilot programs globally",
@@ -395,7 +392,7 @@ export default function DesignPage() {
                           </h3>
                         </div>
 
-                        <ul className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
                             "Diegetic prototyping creating artifacts that exist within the fictional world",
                             "World-building establishing political, economic, and social context",
@@ -422,7 +419,7 @@ export default function DesignPage() {
                           </h3>
                         </div>
 
-                        <ul className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
                             "Seminar discussions analyzing the effectiveness of different artifacts",
                             "Critical reflection on how design choices communicate both promise and threat",
@@ -448,7 +445,7 @@ export default function DesignPage() {
                           </h3>
                         </div>
 
-                        <ul className="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
                             "Universal Basic Income and welfare system design",
                             "Surveillance mechanisms hidden within helpful features",
@@ -467,12 +464,12 @@ export default function DesignPage() {
 
                     </div>
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">Key Outcomes & Impact</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Key Outcomes & Impact</h2>
                   <ul className="space-y-4">
                     {keyoutcomes?.map((item, i) => (
                       <li key={i} className="flex gap-3">
                         <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
-                        <p className="text-gray-700 leading-relaxed text-lg">{item}</p>
+                        <p className="text-gray-500 leading-relaxed text-base">{item}</p>
                       </li>
                     ))}
                   </ul>

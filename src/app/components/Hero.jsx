@@ -15,13 +15,14 @@ export default function Hero() {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-                    Designing the Future of <br />
-                    <span className="bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight sm:leading-snug md:leading-tight">
+                    Designing the Future of{" "}
+
+                    <span className="block bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
                         Human-System
                     </span>
-                    <br />
-                    <span className="bg-indigo-300 bg-clip-text text-transparent">
+
+                    <span className="block bg-gradient-to-r from-indigo-400 to-indigo-200 bg-clip-text text-transparent">
                         Interaction
                     </span>
                 </h1>

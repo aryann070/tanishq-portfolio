@@ -47,17 +47,17 @@ export default async function ProjectDetail({ params }) {
 
           {/* LEFT PANEL */}
           <div className="bg-white rounded-2xl p-6 shadow-sm">
-            <p className="text-xs text-gray-400 uppercase mb-1">My Role</p>
+            <p className="text-xs text-gray-400 font-semibold uppercase mb-1">My Role</p>
             <p className="text-gray-800 font-medium mb-4">{project.role}</p>
 
             {project.team && (
               <>
-                <p className="text-xs text-gray-400 uppercase mb-1">Supervision / Team</p>
+                <p className="text-xs text-gray-400 font-semibold uppercase mb-1">Supervision / Team</p>
                 <p className="text-gray-700 mb-4">{project.team}</p>
               </>
             )}
 
-            <p className="text-xs text-gray-400 uppercase mb-2">Tools & Tech</p>
+            <p className="text-xs text-gray-400 font-semibold uppercase mb-2">Tools & Tech</p>
             <div className="flex flex-wrap gap-2 mb-5">
               {project.tools?.map((tool, i) => (
                 <span key={i} className="text-xs bg-gray-100 px-2 py-1 rounded-md text-gray-600">
@@ -71,9 +71,10 @@ export default async function ProjectDetail({ params }) {
                 href={project.prototype}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+                className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
               >
                 View Prototype
+                <BsBoxArrowUpRight size={16} />
               </a>
             )}
           </div>
@@ -105,7 +106,7 @@ export default async function ProjectDetail({ params }) {
 
                     {/* Title & Description */}
                     <div>
-                      <h3 className="font-semibold text-[#0f172a] text-sm leading-snug mb-3">
+                      <h3 className="font-semibold text-[#0f172a] text-lg leading-snug mb-3">
                         {sub.title}
                       </h3>
                       <p className="text-gray-500 text-xs leading-relaxed">
@@ -153,7 +154,7 @@ export default async function ProjectDetail({ params }) {
                             href={sub.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 w-full text-sm text-white bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg"
+                            className="flex items-center font-semibold justify-center gap-2 w-full text-xs text-white bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg"
                           >
                             {sub.label}
                             <BsBoxArrowUpRight size={16} />
@@ -169,31 +170,31 @@ export default async function ProjectDetail({ params }) {
 
 
             <div className="max-w-5xl">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 The Challenge
               </h2>
 
-              <p className="text-gray-700 leading-relaxed text-lg  mb-12">
+              <p className="text-gray-500 leading-relaxed text-base  mb-12">
                 {project.challenges}
               </p>
             </div>
 
             <div className="max-w-5xl">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Approach & Solution
               </h2>
 
-              <p className="text-gray-700 leading-relaxed text-lg  mb-12">
+              <p className="text-gray-500 leading-relaxed text-base  mb-12">
                 {project.approach}
               </p>
             </div>
 
             {/*Research Methodology*/}
             {project.id === "human-factors-dlr" && project.methodology && (
-              <section className="bg-white max-w-5xl px-10 py-14 rounded-2xl mt-10 mb-12 shadow-md">
+              <section className="bg-white max-w-5xl px-8 py-8 rounded-2xl mt-10 mb-12 shadow-md">
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+                <h2 className="text-2xl md:text-2xl font-bold text-gray-900 mb-12">
                   Methodology
                 </h2>
 
@@ -202,7 +203,7 @@ export default async function ProjectDetail({ params }) {
                   {/* Research Methods */}
                   {project.methodology.researchMethods?.length > 0 && (
                     <div>
-                      <div className="flex items-start gap-3 mb-5">
+                      <div className="flex items-center gap-3 mb-5">
                         <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100">
                           <BsFileEarmarkText className="text-blue-600" size={18} />
                         </div>
@@ -213,7 +214,7 @@ export default async function ProjectDetail({ params }) {
 
                       <ul className="space-y-4">
                         {project.methodology.researchMethods.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
                             <BsCheckCircle className="text-blue-500 mt-[2px]" size={16} />
                             <span>{item}</span>
                           </li>
@@ -236,7 +237,7 @@ export default async function ProjectDetail({ params }) {
 
                       <ul className="space-y-4">
                         {project.methodology.designProcess.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
                             <BsCheckCircle className="text-purple-500 mt-[2px]" size={16} />
                             <span>{item}</span>
                           </li>
@@ -259,7 +260,7 @@ export default async function ProjectDetail({ params }) {
 
                       <ul className="space-y-4">
                         {project.methodology.evaluationMethods.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
                             <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
                             <span>{item}</span>
                           </li>
@@ -282,7 +283,7 @@ export default async function ProjectDetail({ params }) {
 
                       <ul className="space-y-4">
                         {project.methodology.focusAreas.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-600">
+                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
                             <BsCheckCircle className="text-orange-500 mt-[2px]" size={16} />
                             <span>{item}</span>
                           </li>
@@ -295,12 +296,12 @@ export default async function ProjectDetail({ params }) {
               </section>
             )}
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
             <ul className="space-y-4">
               {project.outcomes?.map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
-                  <p className="text-gray-700 leading-relaxed text-lg">{item}</p>
+                  <p className="text-gray-500 leading-relaxed text-base">{item}</p>
                 </li>
               ))}
             </ul>
