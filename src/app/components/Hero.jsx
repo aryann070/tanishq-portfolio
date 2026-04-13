@@ -15,7 +15,7 @@ export default function Hero() {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight sm:leading-snug md:leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug break-words">
                     Designing the Future of{" "}
 
                     <span className="block bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
@@ -29,7 +29,7 @@ export default function Hero() {
 
                 {/* Description */}
                 <p className="mt-6 max-w-2xl text-gray-300 text-xl leading-relaxed">
-                    I bridge the gap between complex aerospace technologies and human
+                    Currently, I bridge the gap between complex aerospace technologies and human
                     intuition. Currently researching Human Factors at{" "}
                     <span className="font-semibold text-white">
                         DLR (German Aerospace Center)
