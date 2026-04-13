@@ -15,7 +15,7 @@ export default function Hero() {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-snug break-words">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-6xl font-bold leading-tight sm:leading-snug md:leading-tight break-words">
                     Designing the Future of{" "}
 
                     <span className="block bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
