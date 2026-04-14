@@ -135,11 +135,12 @@ export default async function ProjectDetail({ params }) {
                       {/* Video Box */}
                       {sub.type === "video" && (
                         <div className="w-full aspect-video bg-[#0f172a] rounded-lg overflow-hidden">
-                          <div className="w-[103%] h-[103%] -ml-[1.5%] -mt-[1.5%]">
+                          <div className="w-full h-full border-0">
                             <iframe
                               src={sub.url}
                               className="w-full h-full border-0"
                               scrolling="no"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                               title={sub.title}
                             />

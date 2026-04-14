@@ -254,7 +254,7 @@ export default function DesignPage() {
                     <div className="rounded-xl overflow-hidden">
                       <iframe
                         className="w-full h-[200px]"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src="https://youtube.com/embed/8JpNrQuAprw"
                         title="Video 1"
                         allowFullScreen
                       />
@@ -267,13 +267,13 @@ export default function DesignPage() {
                       GOVnet Promotional Video 2
                     </h3>
                     <p className="text-sm text-gray-500">
-                      A second perspective on life within the GOVnet ecosystem, exploring citizen experiences with the UBI system and point-based credit system through narrative storytelling.
+                      A second perspective on life within the GOVnet ecosystem, exploring citizen experiences with the UBI system and point-based credit system through narrative storytelling and immersion.
                     </p>
 
                     <div className="rounded-xl overflow-hidden">
                       <iframe
                         className="w-full h-[200px]"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src="https://youtube.com/embed/OZsCGyvL9EA"
                         title="Video 2"
                         allowFullScreen
                       />

@@ -142,7 +142,7 @@ export const projects = [
         title: "Zensis: VR Meditation",
         description: "Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user.",
         type: "video",
-        url: "https://www.behance.net/embed/project/190876541",
+        url: "https://www.youtube.com/embed/v0EcgNICXJQ",
       },
       {
         title: "OVR Lap: Multi-Location Perception",

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Reveal from "../components/Reveal";
 
 const projects = [
   {
@@ -107,20 +108,26 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
+
         <div className="mb-12">
-          <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
-            Portfolio
-          </span>
-          <h2 className="text-4xl font-bold mt-4 text-gray-900">
-            Work & Research
-          </h2>
-          <p className="text-gray-600 mt-3 max-w-xl">
-            A collection of projects exploring the intersection of human factors,
-            aerospace technology, and artificial intelligence.
-          </p>
+          <Reveal>
+            <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
+              Portfolio
+            </span>
+            <h2 className="text-4xl font-bold mt-4 text-gray-900">
+              Work & Research
+            </h2>
+            <p className="text-gray-600 mt-3 max-w-xl">
+              A collection of projects exploring the intersection of human factors,
+              aerospace technology, and artificial intelligence.
+            </p>
+          </Reveal>
         </div>
 
+
+
         {/* Cards */}
+
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Link key={project.id} href={`/projects/${project.id}`}>
@@ -168,7 +175,6 @@ export default function ProjectsSection() {
             </Link>
           ))}
         </div>
-
       </div>
     </section>
   );
