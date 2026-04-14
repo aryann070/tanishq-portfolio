@@ -176,11 +176,13 @@ export default function DesignPage() {
 
                   {/* 🖼️ Image */}
                   <div className="md:-ml-3 ">
-                    <img
-                      src="/images/design.png"
-                      alt="People Who Vanished"
-                      className="overflow-hidden w-full h-[500px] object-fit"
-                    />
+                    <Link href="https://www.behance.net/gallery/187169011/Infographic-Research-Paper">
+                      <img
+                        src="/images/design.png"
+                        alt="People Who Vanished"
+                        className="overflow-hidden w-full h-[500px] object-cover cursor-pointer"
+                      />
+                    </Link>
                   </div>
                   {/* 📝 Content */}
                   <div className="space-y-4 text-gray-700 leading-relaxed">

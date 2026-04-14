@@ -135,7 +135,7 @@ export const projects = [
         title: "Research Seminar: AR/VR Interaction Paradigms",
         description: "A systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating 'naturalness' in mixed reality.",
         type: "report",
-        url: "#",
+        url: "/pdf/vr-seminar-report.pdf",
         label: "Read Seminar Report",
       },
       {
