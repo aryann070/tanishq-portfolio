@@ -1,4 +1,42 @@
+"use client"
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.2, // 👈 one-by-one
+        },
+    },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 60 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+        },
+    },
+};
+
 export default function ExperienceEducation() {
+
+  
+
+  const item = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
     const timeline = [
         {
             title: "Research Assistant",
@@ -34,7 +72,15 @@ export default function ExperienceEducation() {
                 <div className="grid md:grid-cols-2 gap-12">
 
                     {/* LEFT SIDE */}
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -80 }}   // 👈 start from left
+                        whileInView={{ opacity: 1, x: 0 }} // 👈 move to normal
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{
+                            duration: 0.6,                   // fast
+                            ease: [0.22, 1, 0.36, 1],        // smooth
+                        }}
+                    >
                         <h2 className="text-4xl font-bold text-[#0f172a] mb-4">
                             Experience & Education
                         </h2>
@@ -48,134 +94,143 @@ export default function ExperienceEducation() {
                         <button className="text-blue-600 font-medium hover:underline">
                             Request Detailed Experience Record
                         </button>
-                    </div>
+                    </motion.div>
 
                     {/* RIGHT SIDE TIMELINE */}
                     <div className="flex flex-col gap-12">
 
-                        {/* TIMELINE */}
-                        <div className="relative">
-                            <div className="relative">
-                                {timeline.map((item, index) => (
-                                    <div key={index} className="mb-10 flex gap-4">
+                        <motion.div className="relative">
+                            {timeline.map((itemData, index) => (
 
-                                        {/* LEFT SIDE (dot + short line) */}
-                                        <div className="flex flex-col items-center">
-                                            <div
-                                                className={`w-3 h-3 rounded-full ring-4 ring-white shadow ${index === 0 ? "bg-blue-600" : "bg-gray-400"
-                                                    }`}
-                                            ></div>
+                                <motion.div
+                                    key={index}
+                                    variants={item}
+                                    initial="hidden"
+                                    whileInView="show"
+                                    viewport={{ once: true, amount: 0.3 }} // 👈 triggers per item
+                                    className="mb-10 flex gap-4"
+                                >
 
-                                            <div className="w-[1px] flex-1 bg-gray-300 mt-1"></div>
+                                    {/* LEFT SIDE */}
+                                    <div className="flex flex-col items-center">
+                                        <div
+                                            className={`w-3 h-3 rounded-full ring-4 ring-white shadow ${index === 0 ? "bg-blue-600" : "bg-gray-400"
+                                                }`}
+                                        ></div>
+
+                                        <div className="w-[1px] flex-1 bg-gray-300 mt-1"></div>
+                                    </div>
+
+                                    {/* RIGHT CONTENT */}
+                                    <div className="flex flex-col md:flex-row md:justify-between w-full gap-2">
+
+                                        <div className="max-w-lg">
+                                            <h3 className="text-lg font-semibold text-[#0f172a]">
+                                                {itemData.title}
+                                            </h3>
+
+                                            <p className="text-blue-600 text-sm font-medium">
+                                                {itemData.org}
+                                            </p>
+
+                                            <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                                                {itemData.desc}
+                                            </p>
                                         </div>
 
-                                        {/* RIGHT CONTENT */}
-                                        <div className="flex flex-col md:flex-row md:justify-between w-full gap-2">
-                                            <div className="max-w-lg">
-                                                <h3 className="text-lg font-semibold text-[#0f172a]">
-                                                    {item.title}
-                                                </h3>
-
-                                                <p className="text-blue-600 text-sm font-medium">
-                                                    {item.org}
-                                                </p>
-
-                                                <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                                                    {item.desc}
-                                                </p>
-
-                                                {item.link && (
-                                                    <a
-                                                        href="#"
-                                                        className="text-blue-600 text-sm mt-2 inline-block hover:underline"
-                                                    >
-                                                        View Related Project →
-                                                    </a>
-                                                )}
-                                            </div>
-
-                                            <span className="text-sm text-gray-500 whitespace-nowrap md:text-right">
-                                                {item.duration}
-                                            </span>
-                                        </div>
+                                        <span className="text-sm text-gray-500 whitespace-nowrap md:text-right">
+                                            {itemData.duration}
+                                        </span>
 
                                     </div>
-                                ))}
-                            </div>
-                        </div>
+
+                                </motion.div>
+
+                            ))}
+                        </motion.div>
 
                         {/* SKILLS SECTION */}
-                        <div>
-                            <h3 className="text-xl font-semibold text-[#0f172a] mb-6">
-                                Technical & Research Skills
-                            </h3>
+                        <motion.div
+  initial={{ opacity: 0, y: 60 }}   // start slightly below
+  whileInView={{ opacity: 1, y: 0 }} // move up + fade in
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{
+    duration: 0.5,
+    ease: "easeOut",
+  }}
+>
+  <div>
+    <h3 className="text-xl font-semibold text-[#0f172a] mb-6">
+      Technical & Research Skills
+    </h3>
 
-                            <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid md:grid-cols-2 gap-8">
 
-                                {/* Research Methods */}
-                                <div>
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                        <h4 className="font-medium text-[#0f172a]">
-                                            Research Methods
-                                        </h4>
-                                    </div>
+      {/* Research Methods */}
+      <div>
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h4 className="font-medium text-[#0f172a]">
+            Research Methods
+          </h4>
+        </div>
 
-                                    <div className="flex flex-wrap gap-3">
-                                        {[
-                                            "Usability Testing",
-                                            "Contextual Inquiry",
-                                            "Heuristic Evaluation",
-                                            "Experimental Design",
-                                            "Statistical Analysis",
-                                            "Survey Design",
-                                        ].map((skill, i) => (
-                                            <span
-                                                key={i}
-                                                className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
+        <div className="flex flex-wrap gap-3">
+          {[
+            "Usability Testing",
+            "Contextual Inquiry",
+            "Heuristic Evaluation",
+            "Experimental Design",
+            "Statistical Analysis",
+            "Survey Design",
+          ].map((skill, i) => (
+            <span
+              key={i}
+              className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
 
-                                {/* Tools & Tech */}
-                                <div>
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                        <h4 className="font-medium text-[#0f172a]">
-                                            Tools & Tech
-                                        </h4>
-                                    </div>
+      {/* Tools & Tech */}
+      <div>
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h4 className="font-medium text-[#0f172a]">
+            Tools & Tech
+          </h4>
+        </div>
 
-                                    <div className="flex flex-wrap gap-3">
-                                        {[
-                                            "Figma",
-                                            "React / TypeScript",
-                                            "Python",
-                                            "Unity 3D",
-                                            "Tailwind CSS",
-                                            "SPSS / R",
-                                            "Prototyping",
-                                        ].map((skill, i) => (
-                                            <span
-                                                key={i}
-                                                className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
+        <div className="flex flex-wrap gap-3">
+          {[
+            "Figma",
+            "React / TypeScript",
+            "Python",
+            "Unity 3D",
+            "Tailwind CSS",
+            "SPSS / R",
+            "Prototyping",
+          ].map((skill, i) => (
+            <span
+              key={i}
+              className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
 
-                            </div>
-                        </div>
+    </div>
+  </div>
+</motion.div>
 
                     </div>
 
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

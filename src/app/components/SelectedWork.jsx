@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function SelectedWork() {
     const projects = [
@@ -34,6 +36,26 @@ export default function SelectedWork() {
             image: "/images/academic-research.png",
         },
     ];
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.12, // 👈 quick one-by-one
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 60 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5, // 👈 fast
+                ease: [0.22, 1, 0.36, 1], // 👈 smooth
+            },
+        },
+    };
 
     return (
         <section className="w-full bg-[#f5f7fb] py-20 px-6">
@@ -60,59 +82,65 @@ export default function SelectedWork() {
                 </div>
 
                 {/* Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }} // 👈 triggers when visible
+                >
                     {projects.map((project, index) => (
-                        <Link
-                            key={index}
-                            href={`/projects/${project.id}`}
-                            className="block h-full"
-                        >
-                            <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
+                        <motion.div key={index} variants={item}>
 
-                                {/* Image */}
-                                <div className="relative w-full h-56 flex-shrink-0">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
+                            <Link
+                                href={`/projects/${project.id}`}
+                                className="block h-full"
+                            >
+                                <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
 
-                                {/* Content */}
-                                <div className="group p-6 flex flex-col flex-grow">
-
-                                    <p className="text-xs text-blue-600 font-semibold mb-3">
-                                        {project.category}
-                                    </p>
-
-                                    {/* Title (fixed lines) */}
-                                    <h3 className="text-lg font-semibold text-[#0f172a] mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
-                                        {project.title}
-                                    </h3>
-
-                                    {/* Description (fixed lines) */}
-                                    <p className="text-gray-500 text-sm mb-4 line-clamp-3">
-                                        {project.description}
-                                    </p>
-
-                                    {/* Tags pushed to bottom */}
-                                    <div className="flex flex-wrap gap-2 mt-auto">
-                                        {project.tags.map((tag, i) => (
-                                            <span
-                                                key={i}
-                                                className="text-xs px-3 py-1 rounded-full bg-gray-100 text-black"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                    {/* Image */}
+                                    <div className="relative w-full h-56 flex-shrink-0">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover"
+                                        />
                                     </div>
 
+                                    {/* Content */}
+                                    <div className="group p-6 flex flex-col flex-grow">
+
+                                        <p className="text-xs text-blue-600 font-semibold mb-3">
+                                            {project.category}
+                                        </p>
+
+                                        <h3 className="text-lg font-semibold text-[#0f172a] mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                                            {project.title}
+                                        </h3>
+
+                                        <p className="text-gray-500 text-sm mb-4 line-clamp-3">
+                                            {project.description}
+                                        </p>
+
+                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                            {project.tags.map((tag, i) => (
+                                                <span
+                                                    key={i}
+                                                    className="text-xs px-3 py-1 rounded-full bg-gray-100 text-black"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
+                            </Link>
+
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
             </div>
         </section>

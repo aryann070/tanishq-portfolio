@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Reveal from "../components/Reveal";
 
+
 const projects = [
   {
     id: "ai-interaction",
@@ -108,9 +109,9 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
+        <Reveal>
+          <div className="mb-12">
 
-        <div className="mb-12">
-          <Reveal>
             <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
               Portfolio
             </span>
@@ -121,15 +122,16 @@ export default function ProjectsSection() {
               A collection of projects exploring the intersection of human factors,
               aerospace technology, and artificial intelligence.
             </p>
-          </Reveal>
-        </div>
 
+          </div>
+        </Reveal>
 
 
         {/* Cards */}
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
+             <Reveal>
             <Link key={project.id} href={`/projects/${project.id}`}>
 
               <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
@@ -173,6 +175,7 @@ export default function ProjectsSection() {
               </div>
 
             </Link>
+            </Reveal>
           ))}
         </div>
       </div>
