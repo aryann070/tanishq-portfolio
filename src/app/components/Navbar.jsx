@@ -26,7 +26,7 @@ export default function Navbar() {
         } shadow-sm`}
     >
       <Reveal>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:pl-2 lg:pr-8 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
