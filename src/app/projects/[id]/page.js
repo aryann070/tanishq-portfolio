@@ -19,7 +19,7 @@ export default async function ProjectDetail({ params }) {
 
   return (
     <section className="bg-[#f5f7fb] min-h-screen px-6 md:px-16 lg:px-8 py-12">
-      <Reveal>
+    
       <div className="max-w-7xl mx-auto">
         {/* Back */}
         <Link
@@ -314,7 +314,7 @@ export default async function ProjectDetail({ params }) {
           </div>
         </div>
       </div>
-      </Reveal>
+     
     </section>
   );
 }
