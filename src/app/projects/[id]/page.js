@@ -105,7 +105,7 @@ export default async function ProjectDetail({ params }) {
             {project.subProjects?.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 {project.subProjects.map((sub, i) => (
-                  <div key={i} className="bg-white rounded-2xl border p-5 shadow-sm flex flex-col justify-between">
+                  <div key={i} className="bg-white rounded-2xl  p-5 shadow-sm flex flex-col justify-between">
 
                     {/* Title & Description */}
                     <div>
