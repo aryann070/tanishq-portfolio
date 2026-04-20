@@ -31,8 +31,21 @@ export const projects = [
       "LaTeX"
     ],
     prototype: "https://uni-siegen-masterthesis-1785236.figma.site/",
-    challenges: "Scientific research today is increasingly collaborative, data-intensive, and distributed across people, time, and tools. While Electronic Laboratory Notebooks (ELNs) have replaced paper notebooks in many labs, their role often remains limited to after-the-fact documentation rather than actively supporting researchers during ongoing work. Through preliminary research, it became clear that many ELNs feel rigid and disconnected from real laboratory practices. Researchers frequently juggle experiments, data interpretation, and collaboration under time pressure, yet documentation and knowledge reuse are treated as secondary tasks. This creates friction, fragmented records, and a loss of contextual knowledge—especially when experiments span multiple days or team members. At the same time, emerging AI technologies offer new possibilities to support scientific work. However, there is a clear gap between technical AI capabilities and meaningful, trustworthy interactions that fit naturally into laboratory workflows. The central challenge of this thesis was therefore not how to build AI, but how to design AI-assisted interactions that genuinely support collaboration, sense-making, and continuity of work—without increasing cognitive load or disrupting established practices.",
-    approach: "This thesis followed a user-centered design approach, grounded in Human–Computer Interaction (HCI) and Computer-Supported Collaborative Learning (CSCL) principles. Rather than proposing a fully automated system, the focus was on designing interaction concepts that carefully integrate AI as a supportive collaborator. User needs and design requirements were derived from a combination of empirical data and literature, including surveys conducted within a large research institute, prior workshop findings, and existing research on collaborative work, distributed cognition, and cognitive load. These insights informed the design of an AI-assisted ELN interaction concept that combines two complementary modalities: Hands-free voice interaction, allowing researchers to document experiments during lab work without breaking focus or workflow A conversational chatbot interface, enabling researchers to retrieve past experiments, explore shared knowledge, and maintain continuity across team members and time Rather than treating the ELN as a passive repository, the proposed concept reframes it as an active partner in scientific sense-making. The design emphasizes transparency, progressive disclosure, and user control, ensuring that AI suggestions remain understandable and trustworthy. To evaluate the concept despite limited access to domain experts, a Wizard-of-Oz user study was conducted. This allowed realistic interaction scenarios to be tested while keeping the AI behavior controlled and interpretable. The evaluation combined standardized measures—such as perceived workload, usability, and trust—with qualitative feedback to capture both experiential and reflective aspects of use.",
+    challenges: "Working within a national aerospace research institute meant operating at the intersection of highly complex systems, diverse expert users, and strict confidentiality constraints. Across multiple projects, the core challenge was not a lack of technology, but a lack of alignment—between how systems were designed and how people actually reason, collaborate, and make decisions when using them. Many of the systems under development dealt with data-intensive, safety-critical, or long-running collaborative work, where users needed to interpret complex information, maintain context over time, and coordinate with others. However, user needs were often implicit, distributed across roles, or embedded in established practices rather than explicitly articulated. This made it difficult to design interaction concepts that genuinely supported sense-making, collaboration, and continuity of work. At the same time, as an external-facing research institution collaborating with industry partners, any design or evaluation work had to carefully balance human-centered insights with technical feasibility, organizational realities, and confidentiality requirements—limiting what could be shown, discussed, or iterated openly.",
+    approaches: ["This thesis followed a user-centered design approach, grounded in Human–Computer Interaction (HCI) and Computer-Supported Collaborative Learning (CSCL) principles. Rather than proposing a fully automated system, the focus was on designing interaction concepts that carefully integrate AI as a supportive collaborator.",
+    "User needs and design requirements were derived from a combination of empirical data and literature, including surveys conducted within a large research institute, prior workshop findings, and existing research on collaborative work, distributed cognition, and cognitive load. These insights informed the design of an AI-assisted ELN interaction concept that combines two complementary modalities:",
+    "Hands-free voice interaction, allowing researchers to document experiments during lab work without breaking focus or workflow",
+    "A conversational chatbot interface, enabling researchers to retrieve past experiments, explore shared knowledge, and maintain continuity across team members and time",
+    "Rather than treating the ELN as a passive repository, the proposed concept reframes it as an active partner in scientific sense-making. The design emphasizes transparency, progressive disclosure, and user control, ensuring that AI suggestions remain understandable and trustworthy.",
+    "To evaluate the concept despite limited access to domain experts, a Wizard-of-Oz user study was conducted. This allowed realistic interaction scenarios to be tested while keeping the AI behavior controlled and interpretable. The evaluation combined standardized measures—such as perceived workload, usability, and trust—with qualitative feedback to capture both experiential and reflective aspects of use.",
+    ],
+    abstract: [
+      "Electronic Laboratory Notebooks (ELN) have become central infrastructures for scientific documentation, offering structured data storage, traceability, and regulatory compliance. However, their prevailing interaction paradigm remains predominantly form-based and keyboard-centered, which may conflict with laboratory realities such as sterility constraints, multitasking, and distributed collaboration. This thesis investigates how a conversational interaction concept for ELN can be designed and evaluated under simulated AI conditions, with a primary focus on interaction structure rather than algorithmic performance.",
+      "Grounded in Human–Computer Interaction (HCI) theory and informed by Computer-Supported Collaborative Learning (CSCL), the work conceptualizes the ELN as a socio-technical artifact that mediates cognition, documentation practices, and collaborative continuity. Design foundations were derived from literature-informed considerations, insights from a DLR user requirements survey, and contextual observations from Kadi4Mat and POLiS laboratory environments. These inputs were synthesized into structural design drivers, including multimodal interaction, in-situ documentation support, human-in-the-loop control, and transparency in AI-mediated workflows.",
+      "A Wizard-of-Oz (WoZ) study was conducted to evaluate the conversational ELN prototype under simulated AI conditions. Voice-based documentation and chatbot-style retrieval were manually simulated to isolate interaction effects from technical AI limitations. A baseline condition using traditional documentation was compared with the prototype. Quantitative measures included the System Usability Scale (SUS), NASA-TLX workload assessment, and a Trust in Automation scale, complemented by qualitative interviews. Due to the exploratory design and limited sample size, quantitative results were analyzed descriptively.",
+      "Findings suggest that conversational interaction structures appear promising for supporting perceived workflow fluidity and contextual retrieval when technical performance is assumed optimal. At the same time, issues of predictability, transparency, and epistemic responsibility emerged as critical design considerations. The thesis contributes to HCI research by empirically examining conversational interaction paradigms within high-stakes scientific documentation contexts using a methodologically controlled simulation approach."
+    ],
+
     outcomes: [
       "A structured set of user needs and design requirements for AI-assisted ELNs",
       "A conceptual prototype illustrating voice interaction and conversational AI",
@@ -41,6 +54,66 @@ export const projects = [
       "Practical guidelines for integrating AI in research systems",
       "A design-oriented perspective on AI in scientific workflows",
     ],
+    researchContext: {
+      "theoreticalGrounding": "Human-Computer Interaction (HCI) & Computer-Supported Collaborative Learning (CSCL)",
+      "studyMethod": "Wizard-of-Oz (WoZ) evaluation under simulated AI conditions",
+      "domain": "Electronic Laboratory Notebooks for scientific documentation & collaboration"
+    },
+    interactionConcept: {
+      "title": "Interaction Concept: Two Modalities",
+      "description": "The proposed concept reframes the ELN from a passive repository into an active partner in scientific sense-making, combining two complementary interaction channels:",
+      "modalities": [
+        {
+          "type": "voice",
+          "title": "Voice Interaction",
+          "description": "Hands-free documentation during active lab work, enabling researchers to record observations without breaking workflow or sterility constraints.",
+          "points": [
+            "In-situ experiment documentation",
+            "Hands-free operation for sterile environments",
+            "Real-time voice-to-structured-data capture",
+            "Reduced cognitive context-switching"
+          ]
+        },
+        {
+          "type": "chatbot",
+          "title": "Conversational Chatbot",
+          "description": "A retrieval-oriented interface for exploring past experiments, shared knowledge, and maintaining continuity across team members and time.",
+          "points": [
+            "Contextual retrieval of past experiments",
+            "Cross-team knowledge exploration",
+            "Collaborative continuity support",
+            "Progressive disclosure of AI suggestions"
+          ]
+        }
+      ]
+    },
+    designPrinciples: {
+      title: "Design Principles",
+      items: [
+        {
+          title: "Transparency",
+          description: "AI suggestions remain understandable with clear rationale and provenance"
+        },
+        {
+          title: "Progressive Disclosure",
+          description: "Information revealed incrementally to reduce cognitive overload"
+        },
+        {
+          title: "Human-in-the-Loop",
+          description: "Researchers maintain control over documentation decisions"
+        },
+        {
+          title: "Epistemic Responsibility",
+          description: "Preserving scientific integrity in AI-mediated workflows"
+        },
+      ],
+    },
+    thesisCTA: {
+      "title": "Read the Full Thesis",
+      "description": "Access the complete research document with detailed methodology, findings, and design implications.",
+      "buttonText": "View Thesis PDF",
+      "link": "https://your-pdf-link.com"
+    }
   },
   {
     id: "human-factors-dlr",
@@ -107,7 +180,7 @@ export const projects = [
         "Cognitive workload in data- and process-intensive work",
         "Designing AI as a supportive collaborator, not a replacement"
       ]
-    }
+    },
   },
   {
     id: "immersive-research",

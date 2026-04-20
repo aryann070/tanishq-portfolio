@@ -4,6 +4,13 @@ import {
   BsFileEarmarkText, BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft,
   BsLayers,
   BsEye,
+  BsBook,
+  BsPeople,
+  BsDatabase,
+  BsMic,
+  BsChatDots,
+  BsCpu,
+
 } from "react-icons/bs";
 import Link from "next/link";
 import Reveal from "@/app/components/Reveal";
@@ -19,7 +26,7 @@ export default async function ProjectDetail({ params }) {
 
   return (
     <section className="bg-[#f5f7fb] min-h-screen px-6 md:px-16 lg:px-8 py-12">
-    
+
       <div className="max-w-7xl mx-auto">
         {/* Back */}
         <Link
@@ -183,14 +190,18 @@ export default async function ProjectDetail({ params }) {
               </p>
             </div>
 
-            <div className="max-w-5xl">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Approach & Solution
-              </h2>
-
-              <p className="text-gray-500 leading-relaxed text-base  mb-12">
-                {project.approach}
-              </p>
+            <div className="mb-12 space-y-5">
+              {Array.isArray(project.approach) ? (
+                project.approach.map((para, i) => (
+                  <p key={i} className="text-gray-500 leading-relaxed text-base">
+                    {para}
+                  </p>
+                ))
+              ) : (
+                <p className="text-gray-500 leading-relaxed text-base">
+                  {project.approach}
+                </p>
+              )}
             </div>
 
             {/*Research Methodology*/}
@@ -300,6 +311,238 @@ export default async function ProjectDetail({ params }) {
               </section>
             )}
 
+
+            {/* Research Context */}
+            {project.id === "ai-interaction" && project.researchContext && (
+              <section className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8 border border-gray-200 mb-6">
+
+                {/* Title */}
+                <h2 className="text-2xl text-gray-900 font-semibold mb-6">
+                  Research Context
+                </h2>
+
+                {/* Top Cards */}
+                <div className="grid md:grid-cols-3 gap-6">
+
+                  {/* Theoretical Grounding */}
+                  <div className="bg-white rounded-xl shadow-sm p-4 text-center">
+                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-blue-100 text-blue-600">
+                      <BsBook size={28} />
+                    </div>
+                    <h3 className="text-sm text-gray-900 font-semibold mb-2 ">Theoretical Grounding</h3>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {project.researchContext.theoreticalGrounding}
+                    </p>
+                  </div>
+
+                  {/* Study Method */}
+                  <div className="bg-white rounded-xl shadow-sm p-4 text-center">
+                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-purple-100 text-purple-600">
+                      <BsPeople size={28} />
+                    </div>
+                    <h3 className="text-sm text-gray-900 font-semibold mb-2">Study Method</h3>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {project.researchContext.studyMethod}
+                    </p>
+                  </div>
+
+                  {/* Domain */}
+                  <div className="bg-white rounded-xl shadow-sm p-4 text-center border">
+                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600">
+                      <BsDatabase size={28} />
+                    </div>
+                    <h3 className="text-sm text-gray-900 font-semibold mb-2">Domain</h3>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {project.researchContext.domain}
+                    </p>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {project.id === "ai-interaction" && project.interactionConcept && (
+              <section className=" mb-6">
+
+                {/* Title */}
+                <h2 className="text-2xl text-gray-900 font-semibold mb-4">
+                  {project.interactionConcept.title}
+                </h2>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 max-w-3xl mb-6 leading-relaxed">
+                  {project.interactionConcept.description}
+                </p>
+
+                {/* Cards */}
+                <div className="grid md:grid-cols-2 gap-6">
+
+                  {project.interactionConcept.modalities?.map((item, index) => {
+                    const isFirst = index === 0;
+
+                    return (
+                      <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+
+                        {/* Header - solid colored band */}
+                        <div
+                          className={`flex items-center gap-3 px-5 py-3 ${isFirst ? "bg-blue-600" : "bg-purple-600"
+                            }`}
+                        >
+                          <div className="text-white">
+                            {isFirst ? <BsMic size={18} /> : <BsChatDots size={18} />}
+                          </div>
+                          <h3 className="text-lg font-semibold text-white">
+                            {item.title}
+                          </h3>
+                        </div>
+
+                        {/* Body */}
+                        <div className="p-5">
+
+                          {/* Description */}
+                          <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                            {item.description}
+                          </p>
+
+                          {/* Points */}
+                          <ul className="space-y-3">
+                            {item.points?.map((point, i) => (
+                              <li
+                                key={i}
+                                className="grid grid-cols-[16px_1fr] gap-2 text-xs text-gray-600"
+                              >
+                                <BsCheckCircle
+                                  className={`mt-[2px] ${isFirst ? "text-blue-500" : "text-purple-500"
+                                    }`}
+                                  size={16}
+                                />
+                                <span>{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
+
+            {project.id === "ai-interaction" && project.designPrinciples && (
+              <section className="mb-10">
+
+                {/* Outer Container */}
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+
+                  {/* Title */}
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-8">
+                    {project.designPrinciples.title}
+                  </h2>
+
+                  {/* Grid */}
+                  <div className="grid md:grid-cols-2 gap-6">
+
+                    {project.designPrinciples.items?.map((item, index) => {
+
+                      let icon = null;
+                      let style = "";
+
+                      if (item.title === "Transparency") {
+                        icon = <BsEye size={18} />;
+                        style = "bg-blue-100 text-blue-600";
+                      } else if (item.title === "Progressive Disclosure") {
+                        icon = <BsLayers size={18} />;
+                        style = "bg-purple-100 text-purple-600";
+                      } else if (item.title === "Human-in-the-Loop") {
+                        icon = <BsPeople size={18} />;
+                        style = "bg-green-100 text-green-600";
+                      } else if (item.title === "Epistemic Responsibility") {
+                        icon = <BsCpu size={18} />;
+                        style = "bg-orange-100 text-orange-600";
+                      }
+
+                      return (
+                        <div
+                          key={index}
+                          className="flex items-start gap-4 p-5 rounded-xl bg-gray-50"
+                        >
+
+                          {/* Icon */}
+                          <div className={`p-3 rounded-lg flex items-center justify-center ${style}`}>
+                            {icon}
+                          </div>
+
+                          {/* Content */}
+                          <div>
+                            <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
+                              {item.description}
+                            </p>
+                          </div>
+
+                        </div>
+                      );
+                    })}
+
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {project.id === "ai-interaction" && project.thesisCTA && (
+
+              <div className="mb-12 space-y-5">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Approach & Methodology
+                </h2>
+                {Array.isArray(project.approaches) ? (
+                  project.approaches.map((para, i) => (
+                    <p key={i} className="text-gray-500 leading-relaxed text-base">
+                      {para}
+                    </p>
+                  ))
+                ) : (
+                  <p className="text-gray-500 leading-relaxed text-base">
+                    {project.approaches}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {project.id === "ai-interaction" && project.thesisCTA && (
+              <section className="mb-10">
+
+                <div className="flex items-center justify-between bg-blue-50 border border-blue-200 rounded-2xl px-8 py-6">
+
+                  {/* Left Content */}
+                  <div className="max-w-2xl">
+                    <h2 className="text-lg font-semibold text-gray-900 mb-2">
+                      {project.thesisCTA.title}
+                    </h2>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {project.thesisCTA.description}
+                    </p>
+                  </div>
+
+                  {/* Button */}
+                  <a
+                    href={project.thesisCTA.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-6 py-3 rounded-xl transition whitespace-nowrap min-w-[180px]"
+                  >
+                    <BsFileEarmarkText size={20} />
+                    <span>{project.thesisCTA.buttonText}</span>
+                  </a>
+
+                </div>
+
+              </section>
+            )}
+
+
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
             <ul className="space-y-4">
               {project.outcomes?.map((item, i) => (
@@ -314,7 +557,7 @@ export default async function ProjectDetail({ params }) {
           </div>
         </div>
       </div>
-     
+
     </section>
   );
 }
