@@ -31,13 +31,13 @@ export const projects = [
       "LaTeX"
     ],
     prototype: "https://uni-siegen-masterthesis-1785236.figma.site/",
-    challenges: "Working within a national aerospace research institute meant operating at the intersection of highly complex systems, diverse expert users, and strict confidentiality constraints. Across multiple projects, the core challenge was not a lack of technology, but a lack of alignment—between how systems were designed and how people actually reason, collaborate, and make decisions when using them. Many of the systems under development dealt with data-intensive, safety-critical, or long-running collaborative work, where users needed to interpret complex information, maintain context over time, and coordinate with others. However, user needs were often implicit, distributed across roles, or embedded in established practices rather than explicitly articulated. This made it difficult to design interaction concepts that genuinely supported sense-making, collaboration, and continuity of work. At the same time, as an external-facing research institution collaborating with industry partners, any design or evaluation work had to carefully balance human-centered insights with technical feasibility, organizational realities, and confidentiality requirements—limiting what could be shown, discussed, or iterated openly.",
+    challenges: "",
     approaches: ["This thesis followed a user-centered design approach, grounded in Human–Computer Interaction (HCI) and Computer-Supported Collaborative Learning (CSCL) principles. Rather than proposing a fully automated system, the focus was on designing interaction concepts that carefully integrate AI as a supportive collaborator.",
-    "User needs and design requirements were derived from a combination of empirical data and literature, including surveys conducted within a large research institute, prior workshop findings, and existing research on collaborative work, distributed cognition, and cognitive load. These insights informed the design of an AI-assisted ELN interaction concept that combines two complementary modalities:",
-    "Hands-free voice interaction, allowing researchers to document experiments during lab work without breaking focus or workflow",
-    "A conversational chatbot interface, enabling researchers to retrieve past experiments, explore shared knowledge, and maintain continuity across team members and time",
-    "Rather than treating the ELN as a passive repository, the proposed concept reframes it as an active partner in scientific sense-making. The design emphasizes transparency, progressive disclosure, and user control, ensuring that AI suggestions remain understandable and trustworthy.",
-    "To evaluate the concept despite limited access to domain experts, a Wizard-of-Oz user study was conducted. This allowed realistic interaction scenarios to be tested while keeping the AI behavior controlled and interpretable. The evaluation combined standardized measures—such as perceived workload, usability, and trust—with qualitative feedback to capture both experiential and reflective aspects of use.",
+      "User needs and design requirements were derived from a combination of empirical data and literature, including surveys conducted within a large research institute, prior workshop findings, and existing research on collaborative work, distributed cognition, and cognitive load. These insights informed the design of an AI-assisted ELN interaction concept that combines two complementary modalities:",
+      "Hands-free voice interaction, allowing researchers to document experiments during lab work without breaking focus or workflow",
+      "A conversational chatbot interface, enabling researchers to retrieve past experiments, explore shared knowledge, and maintain continuity across team members and time",
+      "Rather than treating the ELN as a passive repository, the proposed concept reframes it as an active partner in scientific sense-making. The design emphasizes transparency, progressive disclosure, and user control, ensuring that AI suggestions remain understandable and trustworthy.",
+      "To evaluate the concept despite limited access to domain experts, a Wizard-of-Oz user study was conducted. This allowed realistic interaction scenarios to be tested while keeping the AI behavior controlled and interpretable. The evaluation combined standardized measures—such as perceived workload, usability, and trust—with qualitative feedback to capture both experiential and reflective aspects of use.",
     ],
     abstract: [
       "Electronic Laboratory Notebooks (ELN) have become central infrastructures for scientific documentation, offering structured data storage, traceability, and regulatory compliance. However, their prevailing interaction paradigm remains predominantly form-based and keyboard-centered, which may conflict with laboratory realities such as sterility constraints, multitasking, and distributed collaboration. This thesis investigates how a conversational interaction concept for ELN can be designed and evaluated under simulated AI conditions, with a primary focus on interaction structure rather than algorithmic performance.",
@@ -47,12 +47,12 @@ export const projects = [
     ],
 
     outcomes: [
-      "A structured set of user needs and design requirements for AI-assisted ELNs",
-      "A conceptual prototype illustrating voice interaction and conversational AI",
-      "Design insights reducing cognitive load and improving collaboration",
-      "Empirical findings on trust, usability, and workload",
-      "Practical guidelines for integrating AI in research systems",
-      "A design-oriented perspective on AI in scientific workflows",
+      "A structured set of user needs and design requirements for AI-assisted ELNs, grounded in empirical research",
+      "A conceptual prototype illustrating how voice interaction and conversational AI can complement existing laboratory workflows",
+      "Design insights into reducing cognitive load, supporting shared understanding, and maintaining continuity across experiments",
+      "Empirical findings showing how users perceive trust, usability, and workload when interacting with AI-supported documentation tools",
+      "Practical design guidelines for integrating AI into collaborative research systems from a human-centered perspective",
+      "Beyond the artifact itself, the thesis contributes a design-oriented perspective on AI in scientific work—highlighting that the success of AI systems depends less on intelligence alone and more on how thoughtfully they are embedded into human practices, collaboration, and learning.",
     ],
     researchContext: {
       "theoreticalGrounding": "Human-Computer Interaction (HCI) & Computer-Supported Collaborative Learning (CSCL)",
@@ -108,6 +108,31 @@ export const projects = [
         },
       ],
     },
+    evaluation: {
+      "title": "Wizard-of-Oz Evaluation",
+      "subtitle": "Simulated AI conditions for controlled interaction assessment",
+      "description": "A Wizard-of-Oz study was conducted to evaluate the conversational ELN prototype. Voice-based documentation and chatbot-style retrieval were manually simulated to isolate interaction effects from technical AI limitations. A baseline condition using traditional documentation was compared with the prototype.",
+      "measures": [
+        {
+          "label": "SUS",
+          "description": "System Usability Scale"
+        },
+        {
+          "label": "NASA-TLX",
+          "description": "Workload Assessment"
+        },
+        {
+          "label": "TiA",
+          "description": "Trust in Automation Scale"
+        }
+      ],
+      "findings": [
+        "Conversational interaction structures appear promising for supporting perceived workflow fluidity",
+        "Contextual retrieval benefits emerged when technical performance is assumed optimal",
+        "Predictability and transparency surfaced as critical design considerations",
+        "Epistemic responsibility challenges require careful design attention in AI-mediated scientific work"
+      ]
+    },
     thesisCTA: {
       "title": "Read the Full Thesis",
       "description": "Access the complete research document with detailed methodology, findings, and design implications.",
@@ -147,40 +172,73 @@ export const projects = [
       "Data Visualization",
     ],
     challenges: "Working within a national aerospace research institute meant operating at the intersection of highly complex systems, diverse expert users, and strict confidentiality constraints. Across multiple projects, the core challenge was not a lack of technology, but a lack of alignment—between how systems were designed and how people actually reason, collaborate, and make decisions when using them. Many of the systems under development dealt with data-intensive, safety-critical, or long-running collaborative work, where users needed to interpret complex information, maintain context over time, and coordinate with others. However, user needs were often implicit, distributed across roles, or embedded in established practices rather than explicitly articulated. This made it difficult to design interaction concepts that genuinely supported sense-making, collaboration, and continuity of work. At the same time, as an external-facing research institution collaborating with industry partners, any design or evaluation work had to carefully balance human-centered insights with technical feasibility, organizational realities, and confidentiality requirements—limiting what could be shown, discussed, or iterated openly.",
-    approach: "My role focused on introducing a human-centered, research-driven design perspective into these complex environments. Rather than starting from interface solutions, I worked from a deep understanding of users, workflows, and interaction dynamics. Across projects, I conducted and synthesized insights from user surveys, participatory workshops, community meetings, and direct engagement with end users, including researchers, engineers, and industry partners. These activities were guided by principles from Human–Computer Interaction (HCI), Computer-Supported Collaborative Learning (CSCL), and Computer-Supported Cooperative Work (CSCW), allowing me to frame findings in terms of collaboration, shared understanding, and cognitive workload. For projects such as MoDa (Models and Data for Future Mobility), this meant translating abstract user needs into interaction concepts for data-driven visualization tools, with a strong emphasis on sense-making, progressive disclosure, and exploratory interaction patterns. For eLab–Kadi4Mat, the focus shifted toward collaborative documentation practices, where I designed and evaluated interaction concepts that supported awareness, continuity of work, and shared knowledge across research teams. In parallel, during my work on VAST (Versatile Aeromechanics Simulation Platform for Helicopters), I applied a human factors lens to safety-critical aerospace software, studying interaction breakdowns, usability challenges, and cognitive workload. I worked closely with users from Airbus and DLR researchers, iteratively refining research questions based on observed behavior and translating findings into concrete evaluation and design recommendations. Throughout all projects, I collaborated closely with developers and researchers to ensure that interaction design decisions were grounded in empirical evidence, while remaining realistic within technical and organizational constraints.",
+    approach: "",
     outcomes: [
-      "Clear, evidence-based user requirements derived from qualitative and participatory research methods",
-      "Interaction concepts and prototypes that improved usability, comprehension, and engagement in data-intensive systems",
-      "Design recommendations addressing cognitive workload, interaction breakdowns, and collaboration challenges in safety-critical environments",
-      "Bridging artifacts—such as interaction flows, design rationales, and evaluation insights—that helped align human-centered findings with technical development",
-      "Strengthened integration of human factors and HCI perspectives within interdisciplinary research and industry-collaborative projects",
-      "Most importantly, this work reinforced my ability to operate effectively in high-stakes, confidential research settings, contributing value not through visuals or polished outputs alone, but through structured thinking, rigorous analysis, and human-centered design decisions that scale beyond any single interface.",
+      "Improved usability and interaction efficiency in safety-critical simulation tools through systematic task analysis and user interviews",
+      "Clear, evidence-based user requirements derived from qualitative and participatory research methods across multiple projects",
+      "Design recommendations addressing cognitive workload, interaction breakdowns, and collaboration challenges in complex systems",
+      "Enhanced data visualization strategies that improved system comprehension and user adoption in mobility and scientific platforms",
+      "Contributed to human-centered improvements in high-stakes aerospace systems and enterprise-level software platforms",
+      "Gained hands-on experience applying HCI and human factors methods to real-world engineering environments with diverse stakeholder groups",
+      "Across these projects, I worked at the intersection of human factors, HCI, and complex systems, focusing on making data-intensive and safety-critical technologies more usable, accessible, and human-centered.",
     ],
-    methodology: {
-      researchMethods: [
-        "User surveys and qualitative analysis",
-        "Literature review grounded in HCI, CSCL, and CSCW theories",
-        "Thematic synthesis and requirement derivation"
+    experienceCard1: {
+      "title": "Future Mobility Systems (MoDa)",
+      "subtitle": "DLR – Institute of Software Technology",
+      "overview": "Worked on supporting services for future mobility platforms, focusing on making complex, data-driven systems more understandable and usable for diverse stakeholders.",
+      "whatIDid": [
+        "Analyzed user workflows and interaction patterns in complex digital systems",
+        "Designed and supported data visualization approaches for better system comprehension",
+        "Identified usability barriers and accessibility challenges in data-heavy interfaces",
+        "Structured documentation to improve onboarding and user adoption"
       ],
-      designProcess: [
-        "User-centered design (UCD) process",
-        "Interaction flow design and concept modeling",
-        "Low- to mid-fidelity prototyping (conceptual focus over visual polish)"
-      ],
-      evaluationMethods: [
-        "Wizard-of-Oz (WoZ) user study",
-        "System Usability Scale (SUS)",
-        "NASA Task Load Index (NASA-TLX)",
-        "Trust in Automation (TiA) measures",
-        "Qualitative feedback and reflective analysis"
-      ],
-      focusAreas: [
-        "Human–AI interaction and transparency",
-        "Collaborative sense-making and knowledge continuity",
-        "Cognitive workload in data- and process-intensive work",
-        "Designing AI as a supportive collaborator, not a replacement"
+      "impact": [
+        "Improved clarity and usability of mobility-related systems",
+        "Enabled better decision-making through clearer data representation",
+        "Supported adoption of complex platforms across interdisciplinary users"
       ]
     },
+    "experienceCard2": {
+      "title": "Kadi4Mat – Electronic Laboratory Notebook (ELN)",
+      "subtitle": "DLR – Human-Centered Digitalisation of Lab Environments",
+      "overview": "Contributed to the design and development of a digital platform for managing laboratory workflows, documentation, and collaboration.",
+      "whatIDid": [
+        "Conducted user-centered design workshops to uncover user needs and pain points",
+        "Identified challenges in GUI, workflows, and scientific data handling",
+        "Contributed to AI-supported concepts for improving lab documentation and processes",
+        "Created structured documentation for users, researchers, and developers"
+      ],
+      "impact": [
+        "Enhanced usability of digital lab environments",
+        "Improved collaboration and data accessibility in research workflows",
+        "Supported transition toward human-centered scientific digitalization"
+      ]
+    },
+    "experienceCard3": {
+      "title": "VAST – Aeromechanics Simulation Platform",
+      "subtitle": "DLR – Aerospace Simulation (Human Factors)",
+      "overview": "Worked on evaluating and improving a safety-critical simulation platform used for helicopter aeromechanics research.",
+      "whatIDid": [
+        "Conducted task analysis and workflow evaluation in simulation environments",
+        "Performed user interviews with domain experts and aerospace stakeholders",
+        "Identified human–system interaction challenges in complex simulation tools",
+        "Translated user insights into actionable design and system requirements",
+        "Collaborated with developers to improve usability and efficiency"
+      ],
+      "impact": [
+        "Improved interaction design in safety-critical aerospace systems",
+        "Increased usability and workflow efficiency for expert users",
+        "Contributed to human-centered improvements in high-stakes engineering tools"
+      ]
+    },
+    "confidentialityNotice": {
+      "title": "Confidentiality Notice",
+      "description": "Due to confidentiality agreements, specific project details, data, and visual materials cannot be publicly disclosed. The following descriptions focus on my contributions, methods, and impact."
+    },
+    "intro": {
+      "text": "Across these projects, I worked at the intersection of human factors, HCI, and complex systems, focusing on making data-intensive and safety-critical technologies more usable, accessible, and human-centered."
+    },
+
   },
   {
     id: "immersive-research",

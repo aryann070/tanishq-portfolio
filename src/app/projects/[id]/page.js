@@ -10,7 +10,10 @@ import {
   BsMic,
   BsChatDots,
   BsCpu,
-
+  BsRobot,
+  BsAirplane,
+  BsFlask,
+  BsShieldLock,
 } from "react-icons/bs";
 import Link from "next/link";
 import Reveal from "@/app/components/Reveal";
@@ -180,15 +183,17 @@ export default async function ProjectDetail({ params }) {
             )}
 
 
-            <div className="max-w-5xl">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                The Challenge
-              </h2>
+            {project?.id !== "ai-interaction" && project?.id !== "human-factors-dlr" && (
+              <div className="max-w-5xl">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  The Challenge
+                </h2>
 
-              <p className="text-gray-500 leading-relaxed text-base  mb-12">
-                {project.challenges}
-              </p>
-            </div>
+                <p className="text-gray-500 leading-relaxed text-base mb-12">
+                  {project.challenges}
+                </p>
+              </div>
+            )}
 
             <div className="mb-12 space-y-5">
               {Array.isArray(project.approach) ? (
@@ -204,112 +209,228 @@ export default async function ProjectDetail({ params }) {
               )}
             </div>
 
-            {/*Research Methodology*/}
-            {project.id === "human-factors-dlr" && project.methodology && (
-              <section className="bg-white max-w-5xl px-8 py-8 rounded-2xl mt-10 mb-12 shadow-md">
+            {project?.id == "human-factors-dlr" && project?.confidentialityNotice && (
+              <section className="max-w-5xl mb-10">
 
-                {/* Title */}
-                <h2 className="text-2xl md:text-2xl font-bold text-gray-900 mb-12">
-                  Methodology
-                </h2>
+                <div className="border border-yellow-300 bg-yellow-50 rounded-2xl px-6 py-5 flex items-start gap-4">
 
-                <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+                  {/* Icon */}
+                  <div className="text-yellow-600 mt-1">
+                    <BsShieldLock size={22} />
+                  </div>
 
-                  {/* Research Methods */}
-                  {project.methodology.researchMethods?.length > 0 && (
-                    <div>
-                      <div className="flex items-center gap-3 mb-5">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100">
-                          <BsFileEarmarkText className="text-blue-600" size={18} />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900">
-                          Research Methods
-                        </h3>
-                      </div>
+                  {/* Text */}
+                  <div>
+                    <h3 className="text-sm font-semibold text-yellow-800 mb-1">
+                      {project.confidentialityNotice.title}
+                    </h3>
 
-                      <ul className="space-y-4">
-                        {project.methodology.researchMethods.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
-                            <BsCheckCircle className="text-blue-500 mt-[2px]" size={16} />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                    <p className="text-sm text-yellow-700 leading-relaxed">
+                      {project.confidentialityNotice.description}
+                    </p>
+                  </div>
 
-                  {/* Design Process */}
-                  {project.methodology.designProcess?.length > 0 && (
-                    <div>
-                      <div className="flex items-center gap-3 mb-5">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100">
-                          <BsLayers className="text-purple-600" size={18} />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900">
-                          Design Process
-                        </h3>
-                      </div>
+                </div>
 
-                      <ul className="space-y-4">
-                        {project.methodology.designProcess.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
-                            <BsCheckCircle className="text-purple-500 mt-[2px]" size={16} />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+              </section>
+            )}
 
-                  {/* Evaluation Methods */}
-                  {project.methodology.evaluationMethods?.length > 0 && (
-                    <div>
-                      <div className="flex items-center gap-3 mb-5">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-green-100">
-                          <BsCheckCircle className="text-green-600" size={18} />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900">
-                          Evaluation Methods
-                        </h3>
-                      </div>
+            {project?.id == "human-factors-dlr" && project?.experienceCard1 && (
+              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
 
-                      <ul className="space-y-4">
-                        {project.methodology.evaluationMethods.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
-                            <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                {/* Header */}
+                <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-5 flex items-start gap-3">
 
-                  {/* Focus Areas */}
-                  {project.methodology.focusAreas?.length > 0 && (
-                    <div>
-                      <div className="flex items-center gap-3 mb-5">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100">
-                          <BsEye className="text-orange-500" size={18} />
-                        </div>
-                        <h3 className="text-lg font-semibold text-gray-900">
-                          Focus Areas
-                        </h3>
-                      </div>
+                  {/* Icon */}
+                  <BsAirplane size={22} className="mt-1 text-white" />
 
-                      <ul className="space-y-4">
-                        {project.methodology.focusAreas.map((item, i) => (
-                          <li key={i} className="grid grid-cols-[20px_1fr] gap-3 text-gray-500 text-sm">
-                            <BsCheckCircle className="text-orange-500 mt-[2px]" size={16} />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {/* Text */}
+                  <div>
+                    <h2 className="text-xl font-semibold">
+                      {project.experienceCard1.title}
+                    </h2>
+                    <p className="text-sm text-gray-100">
+                      {project.experienceCard1.subtitle}
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+
+                  {/* Overview */}
+                  <h3 className="font-semibold text-gray-900 mb-2">Overview</h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {project.experienceCard1.overview}
+                  </p>
+
+                  {/* What I Did */}
+                  <h3 className="font-semibold text-gray-900 mb-3">What I Did</h3>
+                  <ul className="space-y-3 mb-6">
+                    {project.experienceCard1.whatIDid?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-blue-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Impact */}
+                  <h3 className="font-semibold text-gray-900 mb-3">Impact</h3>
+                  <ul className="space-y-3">
+                    {project.experienceCard1.impact?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                 </div>
               </section>
             )}
+
+            {project?.id == "human-factors-dlr" && project?.experienceCard2 && (
+              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
+
+                {/* Header */}
+                <div className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-5 flex items-start gap-3">
+
+                  <BsFlask size={22} className="mt-1 text-white/90" />
+
+                  <div>
+                    <h2 className="text-xl font-semibold">
+                      {project.experienceCard2.title}
+                    </h2>
+                    <p className="text-sm text-gray-100">
+                      {project.experienceCard2.subtitle}
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+
+                  {/* Overview */}
+                  <h3 className="font-semibold text-gray-900 mb-2">Overview</h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {project.experienceCard2.overview}
+                  </p>
+
+                  {/* What I Did */}
+                  <h3 className="font-semibold text-gray-900 mb-3">What I Did</h3>
+                  <ul className="space-y-3 mb-6">
+                    {project.experienceCard2.whatIDid?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-purple-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Impact */}
+                  <h3 className="font-semibold text-gray-900 mb-3">Impact</h3>
+                  <ul className="space-y-3">
+                    {project.experienceCard2.impact?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+              </section>
+            )}
+
+
+
+            {project?.id == "human-factors-dlr" && project?.experienceCard3 && (
+              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
+
+                {/* Header */}
+                <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-5 flex items-start gap-3">
+
+                  <BsAirplane size={22} className="mt-1 text-white/90" />
+
+                  <div>
+                    <h2 className="text-xl font-semibold">
+                      {project.experienceCard3.title}
+                    </h2>
+                    <p className="text-sm text-gray-100">
+                      {project.experienceCard3.subtitle}
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+
+                  {/* Overview */}
+                  <h3 className="font-semibold text-gray-900 mb-2">Overview</h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {project.experienceCard3.overview}
+                  </p>
+
+                  {/* What I Did */}
+                  <h3 className="font-semibold text-gray-900 mb-3">What I Did</h3>
+                  <ul className="space-y-3 mb-6">
+                    {project.experienceCard3.whatIDid?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-gray-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Impact */}
+                  <h3 className="font-semibold text-gray-900 mb-3">Impact</h3>
+                  <ul className="space-y-3">
+                    {project.experienceCard3.impact?.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-600">
+                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+              </section>
+            )}
+
+            {project?.id == "human-factors-dlr" && project?.intro?.text && (
+              <div className="w-full rounded-2xl border border-[#d6e3f3] bg-[#eef4fb] px-6 py-6 mb-8">
+                <p className="text-gray-500 text-sm leading-[1.7] italic">
+                  {project.intro.text}
+                </p>
+              </div>
+
+            )}
+
+
+
+            {project?.id == "ai-interaction" && (
+              <div className="max-w-5xl">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Abstract
+                </h2>
+
+                <div className="space-y-4 mb-12">
+                  {project.abstract?.map((para, index) => (
+                    <p
+                      key={index}
+                      className="text-gray-500 leading-relaxed text-base"
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+
 
 
             {/* Research Context */}
@@ -488,6 +609,71 @@ export default async function ProjectDetail({ params }) {
 
                   </div>
                 </div>
+              </section>
+            )}
+
+
+
+
+            {project.id === "ai-interaction" && project.evaluation && (
+              <section className="bg-white max-w-5xl px-8 py-8 rounded-2xl mt-10 mb-12 shadow-md border">
+
+                {/* Header */}
+                <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-5 rounded-t-2xl -mx-8 -mt-8 mb-6 flex items-center gap-3">
+                  <BsRobot size={22} />
+                  <div>
+                    <h2 className="text-xl font-semibold">
+                      {project.evaluation.title}
+                    </h2>
+                    <p className="text-sm text-gray-200">
+                      {project.evaluation.subtitle}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-8">
+                  {project.evaluation.description}
+                </p>
+
+                {/* Measures */}
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Evaluation Measures
+                </h3>
+
+                <div className="grid md:grid-cols-3 gap-4 mb-8">
+                  {project.evaluation.measures?.map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-gray-100 rounded-xl py-4 text-center"
+                    >
+                      <h4 className="text-blue-600 font-semibold">
+                        {item.label}
+                      </h4>
+                      <p className="text-xs text-gray-500">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Findings */}
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Key Findings
+                </h3>
+
+                <ul className="space-y-4">
+                  {project.evaluation.findings?.map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-sm text-gray-600"
+                    >
+                      <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
               </section>
             )}
 
