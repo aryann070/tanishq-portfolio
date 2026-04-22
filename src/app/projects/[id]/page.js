@@ -183,7 +183,7 @@ export default async function ProjectDetail({ params }) {
             )}
 
 
-            {project?.id !== "ai-interaction" && project?.id !== "human-factors-dlr" && (
+            {project?.id !== "ai-interaction" && project?.id !== "human-factors-dlr" && project?.id !== "protrack-athlete-performance" && (
               <div className="max-w-5xl">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   The Challenge
@@ -728,6 +728,45 @@ export default async function ProjectDetail({ params }) {
               </section>
             )}
 
+            {project.id === "protrack-athlete-performance" && project.interactivePrototype && (
+              <section className="bg-[#f5f7fb]">
+
+                {/* Title */}
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {project.designOverview.title}
+                </h2>
+
+                {/* Image */}
+                <div className="h-[400px] md:h-[500px] rounded-2xl overflow-y-auto mb-10">
+                  <img
+                    src={project.designOverview.image}
+                    alt={project.designOverview.alt}
+                    className="w-full object-contain"
+                  />
+                </div>
+
+              </section>
+            )}
+
+            {project.id === "protrack-athlete-performance" && project.interactivePrototype && (
+              <section className="bg-[#f5f7fb]">
+
+                {/* Title */}
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {project.interactivePrototype.title}
+                </h2>
+
+                {/* Image */}
+                <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm mb-12">
+                  <img
+                    src={project.interactivePrototype.image}
+                    alt={project.interactivePrototype.alt}
+                    className="w-full h-[400px] md:h-[500px] object-cover"
+                  />
+                </div>
+
+              </section>
+            )}
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Outcomes & Impact</h2>
             <ul className="space-y-4">

@@ -371,11 +371,18 @@ export const projects = [
     tools: ["Mobile App", "Data Visualization", "Sports Tech", "iOS", "Dark Mode UI"],
     icons: ["/icons/graph.png", "/icons/phone.png", "/icons/thunder.png"],
     challenges: "Elite athletes generate massive amounts of data from wearables, but raw numbers are often overwhelming and actionable insights are lost. Existing apps were either too casual (gamified fitness) or too scientific (raw spreadsheets). The goal was to bridge this gap.",
-    approach: "I designed ProTrack to be the 'cockpit' for athletic training. The interface prioritizes 'Readiness to Train'—a synthesized metric combining sleep, HRV, and recent load. The UI uses a dark, high-contrast aesthetic suitable for gym environments and outdoor use. Key features include: - Real-time heart rate zone visualization - Comparative analysis of past sessions - Injury risk warnings based on training load spikes The navigation was simplified to 'Plan', 'Track', and 'Analyze', mirroring the athlete's mental model of their training cycle.",
     outcomes: [
       "Designed 25+ screens covering the core user flow",
       "Created a custom icon set for biomechanical metrics",
       "Validated the 'Readiness' concept through interviews with semi-pro runners",
     ],
+    interactivePrototype: {
+      "title": "Interactive Prototype",
+      "image": "/images/",
+    },
+    designOverview: {
+      "title": "Design Overview",
+      "image": "/images/athlete-design.png",
+    }
   }
 ];

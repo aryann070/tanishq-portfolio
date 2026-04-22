@@ -178,9 +178,9 @@ export default function DesignPage() {
                   <div className="md:-ml-3 ">
                     <Link href="https://www.behance.net/gallery/187169011/Infographic-Research-Paper">
                       <img
-                        src="/images/design.png"
+                        src="/images/design-overview.jpg"
                         alt="People Who Vanished"
-                        className="overflow-hidden w-full h-[500px] object-cover cursor-pointer"
+                        className="overflow-hidden w-full h-[500px] object-fit cursor-pointer"
                       />
                     </Link>
                   </div>
