@@ -4,11 +4,11 @@ export const projects = [
   {
     id: "ai-interaction",
     category: "Master’s Thesis",
-    year: "2023",
+    year: "2026",
     title:
       "Designing AI-Assisted Interaction Concepts for Collaborative Scientific Work",
     subtitle:
-      "Multimodal Interaction for Electronic Laboratory Notebooks",
+      "AI Assisted Electronic Laboratory Notebook",
 
     role: "Student",
     team: "Prof. Robin Neuhaus (Supervisor)",
@@ -143,9 +143,9 @@ export const projects = [
   {
     id: "human-factors-dlr",
     category: "Professional Work @ DLR",
-    year: "2024 - Present",
+    year: "March 2024 - Present",
     title: "Human Factors for Software Engineering & Human-System Interaction at DLR",
-    subtitle: "Intelligent Distributed Systems & Software Technology",
+    subtitle: "Intelligente und Verteilte Systeme & Institut für Softwaretechnologie",
     description: "Conducting human-centered research on collaborative and data-driven interactive systems.",
     image: "/images/professional-work.png",
     role: "Research Assistant",
@@ -254,7 +254,25 @@ export const projects = [
     prototype: null,
     tools: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing", "User Testing"],
     challenges: "The rapid evolution of spatial computing challenges established interaction metaphors. Key questions include: How can VR support mental well-being without sensory overload? How do users conceptualize digital objects in physical space (AR)? And can we expand human perception to monitor multiple virtual locations simultaneously?",
-    approach: "This portfolio entry consolidates three distinct research initiatives conducted at the University of Siegen: 1. Zensis: VR Meditation for Stress Reduction Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user, focusing on calm technology principles. 2. AR/VR Interaction Paradigms (Research Seminar) Conducted a systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating naturalness in mixed reality. 3. OVR Lap: Multi-Location Perception Investigated the theoretical limits of spatial awareness by proposing a multi-view VR interface. The project visualized how users might monitor and interact with two distinct virtual environments simultaneously, addressing challenges in attention allocation and visual clutter.",
+    // approach: "This portfolio entry consolidates three distinct research initiatives conducted at the University of Siegen: 1. Zensis: VR Meditation for Stress Reduction Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user, focusing on calm technology principles. 2. AR/VR Interaction Paradigms (Research Seminar) Conducted a systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating naturalness in mixed reality. 3. OVR Lap: Multi-Location Perception Investigated the theoretical limits of spatial awareness by proposing a multi-view VR interface. The project visualized how users might monitor and interact with two distinct virtual environments simultaneously, addressing challenges in attention allocation and visual clutter.",
+    approachsol: {
+      "title": "Research Initiatives at University of Siegen",
+      "description": "This portfolio entry consolidates three distinct research initiatives conducted at the University of Siegen.",
+      "projects": [
+        {
+          "title": "Zensis: VR Meditation for Stress Reduction",
+          "details": "Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user, focusing on \"calm technology\" principles."
+        },
+        {
+          "title": "AR/VR Interaction Paradigms (Research Seminar)",
+          "details": "Conducted a systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating \"naturalness\" in mixed reality."
+        },
+        {
+          "title": "OVR Lap: Multi-Location Perception (CHI Conference Paper)",
+          "details": "Worked with Prof. Robin Neuhaus to investigate and study interaction techniques from a research paper published at the CHI conference. The paper explores the theoretical limits of spatial awareness through a \"multi-view\" VR interface, examining how users might monitor and interact with two distinct virtual environments simultaneously. I re-presented the paper and designed a poster for presentation at the seminar, addressing challenges in attention allocation and visual clutter."
+        }
+      ]
+    },
     outcomes: [
       "Developed a fully functional VR meditation prototype (Zensis) in Unity",
       "Authored a comprehensive semantic analysis of AR/VR interaction metaphors",
@@ -264,7 +282,7 @@ export const projects = [
     subProjects: [
       {
         title: "Research Seminar: AR/VR Interaction Paradigms",
-        description: "A systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating 'naturalness' in mixed reality.",
+        description: "Explores how virtual reality can simulate variable gravity environments, inspired by 3 Body Problem. Focuses on intuitive navigation and immersive interaction to enhance training, education, and research.",
         type: "report",
         url: "/pdf/vr-seminar-report.pdf",
         label: "Read Seminar Report",
@@ -277,7 +295,7 @@ export const projects = [
       },
       {
         title: "OVR Lap: Multi-Location Perception",
-        description: "Investigated the theoretical limits of spatial awareness by proposing a 'multi-view' VR interface. The project visualized how users might monitor and interact with two distinct virtual environments simultaneously.",
+        description: "Represented a CHI conference paper on multi-location VR perception through investigation and study of the interaction concepts. Designed a comprehensive poster and delivered a poster presentation for the seminar.",
         type: "prototype",
         url: "https://www.behance.net/gallery/202737945/Poster-on-the-research-paper-OVRLAP-perc",
         label: "View Behance Poster",
@@ -287,7 +305,7 @@ export const projects = [
   {
     id: "fintech-product-suite",
     category: "Professional Work",
-    year: "2021",
+    year: "2022 - 2023",
     title: "Fintech Product Suite",
     subtitle: "The Pioneers Solutions, Egypt",
     description: "Designed comprehensive fintech solutions including a mobile wallet application and corporate banking dashboard for the Egyptian market.",
@@ -303,7 +321,7 @@ export const projects = [
       "Improved user task completion rates for key financial operations in testing",
       "Successfully handed off designs for development and implementation",
     ],
-    challenges: "The Egyptian fintech market is rapidly evolving, with users needing accessible, trustworthy, and efficient digital financial tools. The challenge was to design a cohesive suite of products—a consumer-facing mobile app and a business-facing web dashboard—that catered to varying levels of digital literacy while maintaining strict security and usability standards.",
+    challenges: "Coming from a culture where people read right-to-left and exhibit right-to-left scanning and skimming behaviors, I faced a unique challenge when traveling to Egypt to work with The Pioneers Solutions. The core challenge was understanding how users in Egypt—who read Arabic from right to left—perceive, navigate, and interact with digital interfaces. This required me to step completely out of my comfort zone and immerse myself in an entirely different design culture. I needed to follow a rigorous User-Centered Design (UCD) process to create experiences that felt natural and intuitive for a mass audience whose reading direction, visual hierarchy expectations, and interaction patterns were fundamentally different from what I was accustomed to. Beyond the technical aspects of RTL (right-to-left) interface design, I had to understand cultural nuances: how Egyptian users build trust with financial applications, what visual metaphors resonate in their context, and how varying levels of digital literacy across the population influenced design decisions. The Egyptian fintech market was rapidly evolving, and users needed accessible, trustworthy, and efficient digital financial tools that respected their cultural context while maintaining strict security and usability standards. This wasn't just about mirroring interfaces—it was about rethinking information architecture, visual hierarchy, navigation patterns, and even color symbolism to align with local expectations and behaviors.",
     approach: "I led the design of two key products: a mobile wallet app focused on quick transactions and bill payments, and a comprehensive web dashboard for SME financial management. The mobile app prioritized speed and clarity, using large touch targets, simplified flows, and biometric authentication to build trust. For the dashboard, I focused on data visualization and hierarchy, enabling business owners to track cash flow and expenses at a glance. Both projects shared a unified design system adapted for their respective platforms (iOS/Android vs. Web), ensuring brand consistency while optimizing for specific device constraints.",
     subProjects: [
       {
@@ -376,13 +394,13 @@ export const projects = [
       "Created a custom icon set for biomechanical metrics",
       "Validated the 'Readiness' concept through interviews with semi-pro runners",
     ],
-    interactivePrototype: {
-      "title": "Interactive Prototype",
-      "image": "/images/",
-    },
     designOverview: {
       "title": "Design Overview",
       "image": "/images/athlete-design.png",
-    }
+    },
+    interactivePrototype: {
+      "title": "Interactive Prototype",
+      "link": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBBRuaHac2VLjEVvngN13dj%2FFreshFX-Test-Project%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D69-539%26viewport%3D126%252C293%252C0.14%26t%3DvtBACH8AjUny4VEq-1%26scaling%3Dscale-down%26starting-point-node-id%3D88%253A464%26mode%3Ddesign",
+    },
   }
 ];

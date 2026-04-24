@@ -14,15 +14,16 @@ import {
   BsEye,
 } from "react-icons/bs"
 import { BsCheckCircle, BsFileEarmarkArrowUp } from "react-icons/bs";
+import { RiH4 } from "react-icons/ri";
 
 const keyoutcomes = [
-  "Developed a comprehensive fictional world with internal consistency and believable details",
-  "Created diegetic prototypes spanning multiple media (interfaces, videos, documents)",
-  "Produced promotional videos that function both as narrative elements and critical commentary",
-  "Designed interfaces that simultaneously demonstrate usability principles and surveillance mechanisms",
-  "Sparked critical discussions about UBI, surveillance capitalism, and the trade-offs between welfare and autonomy",
-  "Demonstrated how persuasive design techniques can normalize authoritarian control",
-  "The project serves as a cautionary tale about well-intentioned systems that enable unprecedented surveillance",
+  "Co-created speculative scenarios exploring diverse futures of digital governance with participant input",
+  "Generated diegetic prototypes (sketches, wireframes, digital mockups) reflecting participant visions",
+  "Identified recurring themes in participant hopes: accessibility, efficiency, equitable service delivery",
+  "Uncovered participant fears: surveillance, loss of privacy, algorithmic discrimination, centralized control",
+  "Demonstrated the value of co-design fiction as a research methodology for exploring complex socio-technical futures",
+  "Created a research framework that privileges participant voices over designer assumptions",
+  "Contributed empirical insights about public attitudes toward digital government technology",
 ]
 
 const icons = ["/icons/home.png", "/icons/bulb.png", "/icons/film.png"]
@@ -53,7 +54,7 @@ export default function DesignPage() {
             Academic Seminar @ Uni Siegen
           </span>
           <span className="text-gray-300 text-lg">|</span>
-          <span className="text-gray-500 text-sm font-semibold">2023</span>
+          <span className="text-gray-500 text-sm font-semibold">2023 - 2024</span>
         </div>
 
         {/* 🧠 Title */}
@@ -237,7 +238,7 @@ export default function DesignPage() {
               <div className="space-y-6">
 
                 {/* 🔵 Top Info Box */}
-                <div className="bg-blue-50 border border-blue-200 text-gray-700 rounded-xl p-4 text-sm">
+                <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-indigo-200 text-gray-700 rounded-xl p-4 text-sm">
                   A speculative digital government platform exploring the promises and perils of centralized welfare systems.
                 </div>
 
@@ -247,10 +248,10 @@ export default function DesignPage() {
                   {/* 🎥 Video 1 */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
                     <h3 className="font-semibold text-gray-900">
-                      GOVnet Promotional Video 1
+                      Behavior Monitoring & Penalty System
                     </h3>
                     <p className="text-sm text-gray-500">
-                      A persuasive promotional video presenting GOVnet as a utopian solution for digital governance and universal welfare—showcasing the system’s promises while subtly hinting at underlying control mechanisms.
+                      A citizen is penalized with negative points for jaywalking, illustrating how everyday actions are tracked and regulated. Highlights the system's impact on personal freedom, surveillance, and behavioral control.
                     </p>
 
                     <div className="rounded-xl overflow-hidden">
@@ -266,10 +267,10 @@ export default function DesignPage() {
                   {/* 🎥 Video 2 */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
                     <h3 className="font-semibold text-gray-900">
-                      GOVnet Promotional Video 2
+                      Reward & Punishment in Civic Behavior
                     </h3>
                     <p className="text-sm text-gray-500">
-                      A second perspective on life within the GOVnet ecosystem, exploring citizen experiences with the UBI system and point-based credit system through narrative storytelling and immersion.
+                      While one individual is penalized for littering, another is rewarded for responsible action. Demonstrates the system's incentive structure shaping public behavior through points and social compliance.
                     </p>
 
                     <div className="rounded-xl overflow-hidden">
@@ -320,11 +321,13 @@ export default function DesignPage() {
                     </h3>
 
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      The primary challenge was to critically examine how a centralized
-                      digital governance system could influence individual autonomy while
-                      presenting itself as efficient and beneficial. Designing a system
-                      that appears trustworthy and seamless, yet subtly embeds control
-                      mechanisms, required balancing realism with speculative intent.
+                      How do people envision the future of digital government technology? What hopes and fears do they harbor about increasingly centralized digital governance systems?
+                    </p>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      This research explored these questions through a co-design fiction approach—a participatory methodology that brings together researchers and participants to collectively imagine and design speculative futures. The challenge was to move beyond designer-centric speculation and instead create space for diverse voices to shape narratives about digital governance.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      Rather than imposing a pre-conceived scenario, we needed to facilitate a process where participants could express their genuine concerns, aspirations, and imaginative projections about how digital government platforms might evolve. This required designing a research approach that balanced structure with creative freedom, enabling participants to co-create believable future scenarios while critically examining the implications of their visions.
                     </p>
                   </div>
 
@@ -335,12 +338,36 @@ export default function DesignPage() {
                     </h3>
 
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      The project adopted a design fiction methodology, using storytelling,
-                      visual artifacts, and diegetic prototypes to construct a believable
-                      future scenario. By creating promotional videos and interactive
-                      elements, the system was presented as a desirable solution while
-                      encouraging critical reflection on its deeper societal implications.
+                      We conducted an immersive co-design fiction study with 4 participants, using a structured yet flexible methodology that combined narrative development with diegetic prototyping.
                     </p>
+                    <h4 className="text-base font-semibold text-gray-800 mb-2">
+                      Research Approach:
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      The study employed semi-structured interviews within a co-design fiction framework. Rather than passively responding to questions, participants actively shaped the research direction by co-creating scenarios, sketching interfaces, and collectively reflecting on the implications of their designs.
+                    </p>
+
+                    <h4 className="text-base font-semibold text-gray-800 mb-2">
+                      Shared Narrative Development:
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      Participants worked collaboratively to develop shared narratives about future digital government platforms. These narratives explored themes of convenience, surveillance, welfare distribution, and citizen-state relationships. The scenarios ranged from optimistic visions of accessible public services to cautionary tales of algorithmic control.
+                    </p>
+
+                    <h4 className="text-base font-semibold text-gray-800 mb-2">
+                      Diegetic Prototyping:
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      To make abstract concepts tangible, participants created artifacts that could exist within their imagined futures—sketches of interface designs, wireframes of government apps, and digital mockups of citizen-facing platforms. These prototypes served as thinking tools, helping participants explore and critique their own visions.
+                    </p>
+
+                    <h4 className="text-base font-semibold text-gray-800 mb-2">
+                      Collective Reflection:
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      Throughout the process, participants engaged in reflective discussions about the scenarios they created. These conversations revealed underlying values, concerns about privacy and autonomy, hopes for societal support systems, and fears about surveillance and control mechanisms.
+                    </p>
+
                   </div>
 
                 </div>
@@ -363,17 +390,17 @@ export default function DesignPage() {
                             <BsFileEarmarkText className="text-blue-600" size={18} />
                           </div>
                           <h3 className="text-lg font-semibold text-gray-900">
-                            Design Process
+                           Research Methods
                           </h3>
                         </div>
 
                         <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
-                            "Analysis of existing digital government platforms and e-governance systems",
-                            "Research into Universal Basic Income proposals and pilot programs globally",
-                            "Investigation of credit score systems (China's Social Credit System, Western credit bureaus)",
-                            "Study of surveillance capitalism and data-driven governance models",
-                            "Analysis of persuasive design patterns in government and fintech applications",
+                            "Semi-structured interviews with 4 participants",
+                            "Immersive co-design fiction approach",
+                            "Shared narrative development and collaborative scenario building",
+                            "Qualitative data collection through participant discussions",
+                            "Thematic analysis of participant responses and concerns",
                           ].map((item, i) => (
                             <li key={i} className="flex gap-2">
                               <BsCheckCircle className="text-blue-500 text-lg shrink-0 mt-1" />
@@ -396,11 +423,10 @@ export default function DesignPage() {
 
                         <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
-                            "Diegetic prototyping creating artifacts that exist within the fictional world",
-                            "World-building establishing political, economic, and social context",
-                            "Interface design applying UX best practices while revealing underlying control",
-                            "Video production creating promotional content with subtle critical undertones",
-                            "Visual design using government aesthetics to enhance believability",
+                            "Diegetic prototyping (sketches, wireframes, digital mockups)",
+                            "Collaborative interface design with participants",
+                            "Scenario co-creation emphasizing participant agency",
+                            "Iterative refinement based on collective reflection",
                           ].map((item, i) => (
                             <li key={i} className="flex gap-2">
                               <BsCheckCircle className="text-purple-500 text-lg shrink-0 mt-1" />
@@ -423,10 +449,10 @@ export default function DesignPage() {
 
                         <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
-                            "Seminar discussions analyzing the effectiveness of different artifacts",
-                            "Critical reflection on how design choices communicate both promise and threat",
-                            "Audience reaction analysis to understand what provocations were most effective",
-                            "Self-assessment of how successfully we balanced believability with critique",
+                            "Qualitative analysis of interview transcripts",
+                            "Thematic synthesis of participant hopes and fears",
+                            "Analysis of co-designed scenarios and prototypes",
+                            "Critical reflection on the co-design fiction methodology",
                           ].map((item, i) => (
                             <li key={i} className="flex gap-2">
                               <BsCheckCircle className="text-green-500 text-lg shrink-0 mt-1" />
@@ -449,12 +475,12 @@ export default function DesignPage() {
 
                         <ul className="space-y-3 text-gray-500 text-sm leading-relaxed">
                           {[
-                            "Universal Basic Income and welfare system design",
-                            "Surveillance mechanisms hidden within helpful features",
-                            "The tension between convenience and privacy",
-                            "Algorithmic governance and automated control",
-                            "Persuasive design as a tool of social control",
-                            "Design's role in normalizing surveillance",
+                            "Co-design fiction as participatory research methodology",
+                            "Public perceptions of digital government technology",
+                            "Participant hopes for accessible and equitable public services",
+                            "Participant fears about surveillance and algorithmic control",
+                            "Balancing convenience with privacy in government platforms",
+                            "The role of design in facilitating critical discourse about technological futures",
                           ].map((item, i) => (
                             <li key={i} className="flex gap-2">
                               <BsCheckCircle className="text-orange-500 text-lg mt-1 shrink-0" />

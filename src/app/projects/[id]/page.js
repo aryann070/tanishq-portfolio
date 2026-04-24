@@ -195,19 +195,26 @@ export default async function ProjectDetail({ params }) {
               </div>
             )}
 
-            <div className="mb-12 space-y-5">
-              {Array.isArray(project.approach) ? (
-                project.approach.map((para, i) => (
-                  <p key={i} className="text-gray-500 leading-relaxed text-base">
-                    {para}
+            {project?.id !== "protrack-athlete-performance" && (
+              <div className="mb-12 space-y-5">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Approach & Solution
+                </h2>
+                {Array.isArray(project.approach) ? (
+                  project.approach.map((para, i) => (
+                    <p key={i} className="text-gray-500 leading-relaxed text-base">
+                      {para}
+                    </p>
+                  ))
+                ) : (
+                  <p className="text-gray-500 leading-relaxed text-base">
+                    {project.approach}
                   </p>
-                ))
-              ) : (
-                <p className="text-gray-500 leading-relaxed text-base">
-                  {project.approach}
-                </p>
-              )}
-            </div>
+                )}
+              </div>
+            )}
+
+            
 
             {project?.id == "human-factors-dlr" && project?.confidentialityNotice && (
               <section className="max-w-5xl mb-10">
@@ -756,13 +763,13 @@ export default async function ProjectDetail({ params }) {
                   {project.interactivePrototype.title}
                 </h2>
 
-                {/* Image */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm mb-12">
-                  <img
-                    src={project.interactivePrototype.image}
-                    alt={project.interactivePrototype.alt}
-                    className="w-full h-[400px] md:h-[500px] object-cover"
-                  />
+                {/* Interactive Prototype */}
+                <div className="h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-10">
+                  <iframe
+                    src={project.interactivePrototype.link}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                  ></iframe>
                 </div>
 
               </section>

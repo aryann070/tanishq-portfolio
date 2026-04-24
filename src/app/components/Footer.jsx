@@ -67,7 +67,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-gray-500 text-sm">
-          © 2026 Portfolio. Designed & Built with React.
+          © Portfolio of Tanishq Ahire. Designed with Figma & Coded by Aryan Surve
         </p>
 
       </motion.div>

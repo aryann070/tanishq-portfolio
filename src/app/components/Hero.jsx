@@ -68,8 +68,8 @@ export default function Hero() {
           Currently, I bridge the gap between complex aerospace technologies and human
           intuition. Currently researching Human Factors at{" "}
           <span className="font-semibold text-white">
-            DLR (German Aerospace Center)
-          </span>.
+            DLR
+          </span>(German Aerospace Center).
         </motion.p>
 
         {/* Buttons */}

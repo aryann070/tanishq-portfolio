@@ -83,7 +83,7 @@ export default function Navbar() {
                 : "bg-white text-black hover:scale-105"
               }`}
           >
-            Hire Me
+           Resume
           </button>
         </div>
       
@@ -133,7 +133,7 @@ export default function Navbar() {
           </Link>
 
           <button className="bg-white text-black px-6 py-2 rounded-full font-semibold w-fit mt-2">
-            Hire Me
+            Resume
           </button>
         </div>
       </div>

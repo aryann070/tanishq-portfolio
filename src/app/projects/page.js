@@ -37,7 +37,7 @@ const projects = [
   {
     id: "human-factors-dlr",
     type: "PROFESSIONAL WORK @ DLR",
-    year: "2024 - Present",
+    year: "March 2024 - Present",
     title:
       "Human Factors for Software Engineering & Human-System Interaction at DLR",
     description:
@@ -76,7 +76,7 @@ const projects = [
   {
     id: "fintech-product-suite",
     type: "PROFESSIONAL WORK",
-    year: "2021",
+    year: "2022 - 2023",
     title: "Fintech Product Suite",
     description: "Designed comprehensive fintech solutions including a mobile wallet application and corporate banking dashboard for the Egyptian market.",
     image: "/images/fintech-product.png",
@@ -85,7 +85,7 @@ const projects = [
   {
     id: "design-for-fiction",
     type: "ACADEMIC SEMINAR @ UNI SIEGEN",
-    year: "2023",
+    year: "2023 - 2024",
     title: "Design for Fiction: Speculative Futures",
     description: "A speculative design project exploring the ethical implications of future neuro-interfaces through diegetic prototyping and fictional narratives.",
     image: "/images/design-fiction.png",
