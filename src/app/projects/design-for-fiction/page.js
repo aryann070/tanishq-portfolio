@@ -80,6 +80,14 @@ export default function DesignPage() {
               <p className="font-medium">Student</p>
             </div>
 
+              {/* Role */}
+            <div>
+              <h3 className="text-xs text-gray-400 uppercase mb-2">
+               Supervisor
+              </h3>
+              <p className="font-medium">Prof. Dr. Judith Dörrenbächer</p>
+            </div>
+
             {/* Tools */}
             <div>
               <h3 className="text-xs text-gray-400 uppercase mb-2">
@@ -306,10 +314,15 @@ export default function DesignPage() {
                       Comprehensive documentation of the design fiction process, including world-building rationale, theoretical framework, artifact creation, and critical reflections on methodology.
                     </p>
 
-                    <button className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition">
+                    <a
+                      href="/pdf/design-for-fiction.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition"
+                    >
                       Read Full Report
                       <BsFileEarmarkText size={16} />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="space-y-10">
@@ -390,7 +403,7 @@ export default function DesignPage() {
                             <BsFileEarmarkText className="text-blue-600" size={18} />
                           </div>
                           <h3 className="text-lg font-semibold text-gray-900">
-                           Research Methods
+                            Research Methods
                           </h3>
                         </div>
 

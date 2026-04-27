@@ -137,7 +137,7 @@ export const projects = [
       "title": "Read the Full Thesis",
       "description": "Access the complete research document with detailed methodology, findings, and design implications.",
       "buttonText": "View Thesis PDF",
-      "link": "https://your-pdf-link.com"
+      "link": "/pdf/master-thesis-ai-eln.pdf"
     }
   },
   {
@@ -148,10 +148,11 @@ export const projects = [
     subtitle: "Intelligente und Verteilte Systeme & Institut für Softwaretechnologie",
     description: "Conducting human-centered research on collaborative and data-driven interactive systems.",
     image: "/images/professional-work.png",
-    role: "Research Assistant",
+    role: "Research Assistant & Working Student",
+    supervisor: "Dr. Ing. Sabine Theis",
     team: null,
     icons: ["/icons/world.png", "/icons/brain.png"],
-    prototype: null,
+    pdf: "/pdf/dlr-praktikumzeugnis.pdf",
     tools: [
       "HCI",
       "Aerospace",
@@ -249,13 +250,15 @@ export const projects = [
     description: "Exploring user presence, spatial perception, and interaction metaphors in VR/AR.",
     image: "/images/academic-research.png",
     role: "Student",
+    supervisor: "Prof. Robin Neuhaus",
     team: null,
     icons: ["/icons/glasses.png", "/icons/layers.png", "/icons/monitor.png"],
+    pdf:"/pdf/dlr-praktikumzeugnis.pdf",
     prototype: null,
     tools: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing", "User Testing"],
     challenges: "The rapid evolution of spatial computing challenges established interaction metaphors. Key questions include: How can VR support mental well-being without sensory overload? How do users conceptualize digital objects in physical space (AR)? And can we expand human perception to monitor multiple virtual locations simultaneously?",
     // approach: "This portfolio entry consolidates three distinct research initiatives conducted at the University of Siegen: 1. Zensis: VR Meditation for Stress Reduction Designed and developed a VR experience using Unity 3D that counteracts motion sickness while promoting mindfulness. The system uses procedural natural environments and spatial audio to ground the user, focusing on calm technology principles. 2. AR/VR Interaction Paradigms (Research Seminar) Conducted a systematic literature review on diegetic vs. non-diegetic interfaces. The resulting analysis categorizes interaction techniques based on cognitive load and immersion, providing a framework for evaluating naturalness in mixed reality. 3. OVR Lap: Multi-Location Perception Investigated the theoretical limits of spatial awareness by proposing a multi-view VR interface. The project visualized how users might monitor and interact with two distinct virtual environments simultaneously, addressing challenges in attention allocation and visual clutter.",
-    approachsol: {
+    approachsolution: {
       "title": "Research Initiatives at University of Siegen",
       "description": "This portfolio entry consolidates three distinct research initiatives conducted at the University of Siegen.",
       "projects": [
@@ -313,6 +316,7 @@ export const projects = [
     role: "UI/UX Designer",
     team: null,
     prototype: null,
+    letter:"/pdf/recommendation-letter.pdf",
     tools: ["Fintech", "Mobile Design", "Web Dashboard", "Design Systems", "Figma", "UI/UX"],
     icons: ["/icons/phone.png", "/icons/card.png"],
     outcomes: [
