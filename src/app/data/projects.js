@@ -253,7 +253,6 @@ export const projects = [
     supervisor: "Prof. Robin Neuhaus",
     team: null,
     icons: ["/icons/glasses.png", "/icons/layers.png", "/icons/monitor.png"],
-    pdf:"/pdf/dlr-praktikumzeugnis.pdf",
     prototype: null,
     tools: ["Unity", "C#", "VR/AR", "HCI Theory", "Spatial Computing", "User Testing"],
     challenges: "The rapid evolution of spatial computing challenges established interaction metaphors. Key questions include: How can VR support mental well-being without sensory overload? How do users conceptualize digital objects in physical space (AR)? And can we expand human perception to monitor multiple virtual locations simultaneously?",
