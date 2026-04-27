@@ -66,7 +66,7 @@ export default function ExperienceEducation() {
   ];
 
   return (
-    <section className="bg-[#f8fafc] py-16 px-4 md:px-10 lg:px-20 w-full">
+    <section id="experience" className="bg-[#f8fafc] py-24 px-4 md:px-10 lg:px-20 w-full">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -89,9 +89,14 @@ export default function ExperienceEducation() {
               My background combines rigorous engineering principles with user-centered design, spanning diverse domains from aerospace systems to speculative design and everyday interactions.
             </p>
 
-            <button className="text-blue-600 font-medium hover:underline">
+            <a
+              href="/pdf/tanishq_cv.pdf"  
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 font-medium hover:underline"
+            >
               Request Detailed Experience Record (CV/Resume)
-            </button>
+            </a>
           </motion.div>
 
           {/* RIGHT SIDE TIMELINE */}
