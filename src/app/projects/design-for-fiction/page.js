@@ -80,10 +80,10 @@ export default function DesignPage() {
               <p className="font-medium">Student</p>
             </div>
 
-              {/* Role */}
+            {/* Role */}
             <div>
               <h3 className="text-xs text-gray-400 uppercase mb-2">
-               Supervisor
+                Supervisor
               </h3>
               <p className="font-medium">Prof. Dr. Judith Dörrenbächer</p>
             </div>
@@ -299,10 +299,15 @@ export default function DesignPage() {
                     <p className="text-sm text-gray-500">
                       Interactive prototype of the GOVnet interface, demonstrating how citizens would interact with the system for daily transactions, welfare management, and civic engagement.
                     </p>
-                    <button className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg text-sm font-medium transition">
+                    <a
+                      href="https://www.figma.com/proto/HURrL6XvOoRnF9YiZoBxJJ/Digital-Government?node-id=1-2&page-id=0%3A1&starting-point-node-id=1%3A2&t=l9rTEMh9M6GwoDTJ-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg text-sm font-medium transition"
+                    >
                       Explore Interactive Prototype
                       <BsBoxArrowUpRight size={16} />
-                    </button>
+                    </a>
                   </div>
 
                   {/* 📄 Documentation */}
