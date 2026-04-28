@@ -2,18 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Volume2, MessageSquare, BookOpen, Users, Database, Brain, Eye, Layers, Bot, FileText, Rocket, FlaskConical, Shield } from "lucide-react";
 import {
-  FaRegFileAlt,
-  FaLayerGroup,
-  FaCheckCircle,
-  FaBullseye,
-} from "react-icons/fa";
-import {
-  BsFileEarmarkText, BsBoxArrowUpRight, BsArrowLeft,
-  BsLayers,
-  BsEye,
-} from "react-icons/bs"
-import { BsCheckCircle, BsFileEarmarkArrowUp } from "react-icons/bs";
+  BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft,
+} from "react-icons/bs";
 import { RiH4 } from "react-icons/ri";
 
 const keyoutcomes = [
@@ -326,7 +318,7 @@ export default function DesignPage() {
                       className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition"
                     >
                       Read Full Report
-                      <BsFileEarmarkText size={16} />
+                      <FileText size={16} />
                     </a>
                   </div>
                 </div>
@@ -405,7 +397,7 @@ export default function DesignPage() {
                       <div>
                         <div className="flex items-center gap-3 mb-5">
                           <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100">
-                            <BsFileEarmarkText className="text-blue-600" size={18} />
+                            <FileText className="text-blue-600" size={18} />
                           </div>
                           <h3 className="text-lg font-semibold text-gray-900">
                             Research Methods
@@ -432,7 +424,7 @@ export default function DesignPage() {
                       <div>
                         <div className="flex items-center gap-3 mb-5">
                           <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100">
-                            <BsLayers className="text-purple-600" size={18} />
+                            <Layers className="text-purple-600" size={18} />
                           </div>
                           <h3 className="text-lg font-semibold text-gray-900">
                             Design Process
@@ -484,7 +476,7 @@ export default function DesignPage() {
                       <div>
                         <div className="flex items-center gap-3 mb-5">
                           <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100">
-                            <BsEye className="text-orange-600" size={18} />
+                            <Eye className="text-orange-600" size={18} />
                           </div>
                           <h3 className="text-lg font-semibold text-gray-900">
                             Focus Areas

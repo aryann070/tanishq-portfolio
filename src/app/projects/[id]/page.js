@@ -1,19 +1,7 @@
 import { projects } from "@/app/data/projects";
-
+import { Volume2, MessageSquare, BookOpen, Users, Database, Brain, Eye, Layers, Bot, FileText, Rocket, FlaskConical, Shield } from "lucide-react";
 import {
-  BsFileEarmarkText, BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft,
-  BsLayers,
-  BsEye,
-  BsBook,
-  BsPeople,
-  BsDatabase,
-  BsMic,
-  BsChatDots,
-  BsCpu,
-  BsRobot,
-  BsAirplane,
-  BsFlask,
-  BsShieldLock,
+  BsBoxArrowUpRight, BsCheckCircle, BsArrowLeft,
 } from "react-icons/bs";
 import Link from "next/link";
 import Reveal from "@/app/components/Reveal";
@@ -109,12 +97,12 @@ export default async function ProjectDetail({ params }) {
                   className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
                 >
                   View Praktikum Zeugnis
-                  <BsFileEarmarkText size={18} />
+                  <FileText size={18} />
                 </a>
               </>
             )}
 
-              {project.letter && (
+            {project.letter && (
               <>
                 <p className="text-xs text-gray-400 font-semibold uppercase mb-1">documents</p>
                 <a
@@ -124,7 +112,7 @@ export default async function ProjectDetail({ params }) {
                   className="flex items-center justify-center gap-2 w-full bg-gray-100 text-gray-800 py-2 rounded-lg hover:bg-gray-300 transition"
                 >
                   View Recommendation Letter
-                  <BsFileEarmarkText size={18} />
+                  <FileText size={18} />
                 </a>
               </>
             )}
@@ -178,7 +166,7 @@ export default async function ProjectDetail({ params }) {
                             className="flex items-center justify-center gap-2 w-full font-medium text-sm text-black bg-gray-100 hover:bg-gray-200 transition px-5 py-3 rounded-lg"
                           >
                             {sub.label}
-                            <BsFileEarmarkText size={16} />
+                            <FileText size={16} />
                           </a>
                         </div>
                       )}
@@ -290,7 +278,7 @@ export default async function ProjectDetail({ params }) {
 
                   {/* Icon */}
                   <div className="text-yellow-600 mt-1">
-                    <BsShieldLock size={22} />
+                    <Shield size={22} />
                   </div>
 
                   {/* Text */}
@@ -316,7 +304,7 @@ export default async function ProjectDetail({ params }) {
                 <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-5 flex items-start gap-3">
 
                   {/* Icon */}
-                  <BsAirplane size={22} className="mt-1 text-white" />
+                  <Rocket size={22} className="mt-1 text-white" />
 
                   {/* Text */}
                   <div>
@@ -371,7 +359,7 @@ export default async function ProjectDetail({ params }) {
                 {/* Header */}
                 <div className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-5 flex items-start gap-3">
 
-                  <BsFlask size={22} className="mt-1 text-white/90" />
+                  <FlaskConical size={22} className="mt-1 text-white/90" />
 
                   <div>
                     <h2 className="text-xl font-semibold">
@@ -427,7 +415,7 @@ export default async function ProjectDetail({ params }) {
                 {/* Header */}
                 <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-5 flex items-start gap-3">
 
-                  <BsAirplane size={22} className="mt-1 text-white/90" />
+                  <Rocket size={22} className="mt-1 text-white/90" />
 
                   <div>
                     <h2 className="text-xl font-semibold">
@@ -522,7 +510,7 @@ export default async function ProjectDetail({ params }) {
                   {/* Theoretical Grounding */}
                   <div className="bg-white rounded-xl shadow-sm p-4 text-center">
                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-blue-100 text-blue-600">
-                      <BsBook size={28} />
+                      <BookOpen size={25} />
                     </div>
                     <h3 className="text-sm text-gray-900 font-semibold mb-2 ">Theoretical Grounding</h3>
                     <p className="text-xs text-gray-600 leading-relaxed">
@@ -533,7 +521,7 @@ export default async function ProjectDetail({ params }) {
                   {/* Study Method */}
                   <div className="bg-white rounded-xl shadow-sm p-4 text-center">
                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-purple-100 text-purple-600">
-                      <BsPeople size={28} />
+                      <Users size={25} />
                     </div>
                     <h3 className="text-sm text-gray-900 font-semibold mb-2">Study Method</h3>
                     <p className="text-xs text-gray-600 leading-relaxed">
@@ -544,7 +532,7 @@ export default async function ProjectDetail({ params }) {
                   {/* Domain */}
                   <div className="bg-white rounded-xl shadow-sm p-4 text-center border">
                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600">
-                      <BsDatabase size={28} />
+                      <Database size={25} />
                     </div>
                     <h3 className="text-sm text-gray-900 font-semibold mb-2">Domain</h3>
                     <p className="text-xs text-gray-600 leading-relaxed">
@@ -583,7 +571,7 @@ export default async function ProjectDetail({ params }) {
                             }`}
                         >
                           <div className="text-white">
-                            {isFirst ? <BsMic size={18} /> : <BsChatDots size={18} />}
+                            {isFirst ? <Volume2 size={18} /> : <MessageSquare size={18} />}
                           </div>
                           <h3 className="text-lg font-semibold text-white">
                             {item.title}
@@ -643,16 +631,16 @@ export default async function ProjectDetail({ params }) {
                       let style = "";
 
                       if (item.title === "Transparency") {
-                        icon = <BsEye size={18} />;
+                        icon = <Eye size={18} />;
                         style = "bg-blue-100 text-blue-600";
                       } else if (item.title === "Progressive Disclosure") {
-                        icon = <BsLayers size={18} />;
+                        icon = <Layers size={18} />;
                         style = "bg-purple-100 text-purple-600";
                       } else if (item.title === "Human-in-the-Loop") {
-                        icon = <BsPeople size={18} />;
+                        icon = <Users size={18} />;
                         style = "bg-green-100 text-green-600";
                       } else if (item.title === "Epistemic Responsibility") {
-                        icon = <BsCpu size={18} />;
+                        icon = <Brain size={18} />;
                         style = "bg-orange-100 text-orange-600";
                       }
 
@@ -694,7 +682,7 @@ export default async function ProjectDetail({ params }) {
 
                 {/* Header */}
                 <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-5 rounded-t-2xl -mx-8 -mt-8 mb-6 flex items-center gap-3">
-                  <BsRobot size={22} />
+                  <Bot size={22} />
                   <div>
                     <h2 className="text-xl font-semibold">
                       {project.evaluation.title}
@@ -792,7 +780,7 @@ export default async function ProjectDetail({ params }) {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-6 py-4 rounded-xl transition w-full md:w-50"
                   >
-                    <BsFileEarmarkText size={20} />
+                    <FileText size={20} />
                     <span>{project.thesisCTA.buttonText}</span>
                   </a>
 
