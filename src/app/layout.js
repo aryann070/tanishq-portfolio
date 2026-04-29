@@ -1,16 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  fallback: ["sans-serif"],
 });
 
 export const metadata = {
@@ -21,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#020617] text-white">
+      <body className={`${inter.className} bg-[#020617] text-white`}>
         
         {/* Navbar (GLOBAL) */}
         <Navbar />
