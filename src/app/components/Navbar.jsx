@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import Reveal from "./Reveal";
+import NavAnimation from "./NavAnimation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
         : "bg-gradient-to-r from-[#0b1a3a]/90 via-[#07122b]/90 to-[#030814]/90"
         } shadow-sm`}
     >
-      <Reveal>
+      <NavAnimation>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:pl-2 lg:pr-8 py-4 flex items-center justify-between">
 
           {/* Logo */}
@@ -97,11 +97,10 @@ export default function Navbar() {
           >
             {open ? <X size={26} /> : <Menu size={26} />}
           </button>
-
         </div>
-      </Reveal>
 
 
+      </NavAnimation>
       {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -141,6 +140,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-
   );
 }

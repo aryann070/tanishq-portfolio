@@ -77,7 +77,7 @@ export default function ExperienceEducation() {
             whileInView={{ opacity: 1, x: 0 }} // 👈 move to normal
             viewport={{ once: true, amount: 0.3 }}
             transition={{
-              duration: 0.6,                   // fast
+              duration: 0.3,                   // fast
               ease: [0.22, 1, 0.36, 1],        // smooth
             }}
           >

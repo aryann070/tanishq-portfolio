@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Reveal from "@/app/components/Reveal";
 import { useState } from "react";
 import { Volume2, MessageSquare, BookOpen, Users, Database, Brain, Eye, Layers, Bot, FileText, Rocket, FlaskConical, Shield } from "lucide-react";
 import {
@@ -176,7 +177,7 @@ export default function DesignPage() {
                 <div className="space-y-4 leading-relaxed">
 
                   {/* 🖼️ Image */}
-                  <div className="md:-ml-3 ">
+                  <div className="md:-ml-3">
                     <Link href="https://www.behance.net/gallery/187169011/Infographic-Research-Paper">
                       <img
                         src="/images/design-overview.jpg"
@@ -186,53 +187,56 @@ export default function DesignPage() {
                     </Link>
                   </div>
                   {/* 📝 Content */}
-                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <Reveal>
+                    <div className="space-y-3 text-gray-700 leading-relaxed">
+                      <h2 className="text-xl font-bold text-gray-900 mt-12">
+                        Designing an Experiential Scenario: The People Who Vanished
+                      </h2>
 
-                    <h2 className="text-lg font-semibold text-gray-900">
-                      Designing an Experiential Scenario: The People Who Vanished
-                    </h2>
+                      <p>
+                        What if we could step into the shoes of the Holocene people, a
+                        mysterious civilization that vanished in the 15th century? The
+                        Experiential Futures Ladder, a conceptual framework for designing
+                        and implementing immersive and impactful experiential scenarios,
+                        offers a unique opportunity to do just that.
+                      </p>
 
-                    <p>
-                      What if we could step into the shoes of the Holocene people, a
-                      mysterious civilization that vanished in the 15th century? The
-                      Experiential Futures Ladder, a conceptual framework for designing
-                      and implementing immersive and impactful experiential scenarios,
-                      offers a unique opportunity to do just that.
-                    </p>
+                      <p className="font-semibold">
+                        The ladder outlines four stages:
+                      </p>
 
-                    <p className="font-semibold">
-                      The ladder outlines four stages:
-                    </p>
+                      <ol className="list-decimal ml-6 space-y-1">
+                        <li>
+                          <strong>Precedents and Provocations:</strong> Gather inspiration
+                          from existing sources and spark imagination.
+                        </li>
+                        <li>
+                          <strong>Scenario Development:</strong> Craft a compelling
+                          narrative that describes a specific future scenario.
+                        </li>
+                        <li>
+                          <strong>Immersive Experience:</strong> Design activities, props,
+                          and environments that bring the scenario to life.
+                        </li>
+                        <li>
+                          <strong>Reflection and Analysis:</strong> Facilitate meaningful
+                          discussions and reflections on the scenario and its implications.
+                        </li>
+                      </ol>
 
-                    <ol className="list-decimal ml-6 space-y-1">
-                      <li>
-                        <strong>Precedents and Provocations:</strong> Gather inspiration
-                        from existing sources and spark imagination.
-                      </li>
-                      <li>
-                        <strong>Scenario Development:</strong> Craft a compelling
-                        narrative that describes a specific future scenario.
-                      </li>
-                      <li>
-                        <strong>Immersive Experience:</strong> Design activities, props,
-                        and environments that bring the scenario to life.
-                      </li>
-                      <li>
-                        <strong>Reflection and Analysis:</strong> Facilitate meaningful
-                        discussions and reflections on the scenario and its implications.
-                      </li>
-                    </ol>
+                      <p>
+                        The Experiential Futures Ladder can be used to design experiential
+                        scenarios that explore a wide range of possible futures, from
+                        utopian visions to dystopian warnings. It is a powerful tool for
+                        fostering critical thinking, empathy, and creativity.
+                      </p>
 
-                    <p>
-                      The Experiential Futures Ladder can be used to design experiential
-                      scenarios that explore a wide range of possible futures, from
-                      utopian visions to dystopian warnings. It is a powerful tool for
-                      fostering critical thinking, empathy, and creativity.
-                    </p>
-                  </div>
+                    </div>
+                  </Reveal>
                 </div>
               )}
             </div>
+
 
             {activeTab === "govnet" && (
               <div className="space-y-6">
@@ -325,62 +329,66 @@ export default function DesignPage() {
                 <div className="space-y-10">
 
                   {/* ⚠️ Challenge */}
-                  <div className="space-y-3 mt-12">
-                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                      The Challenge
-                    </h3>
+                  <Reveal>
+                    <div className="space-y-3 mt-12">
+                      <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                        The Challenge
+                      </h3>
 
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      How do people envision the future of digital government technology? What hopes and fears do they harbor about increasingly centralized digital governance systems?
-                    </p>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      This research explored these questions through a co-design fiction approach—a participatory methodology that brings together researchers and participants to collectively imagine and design speculative futures. The challenge was to move beyond designer-centric speculation and instead create space for diverse voices to shape narratives about digital governance.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      Rather than imposing a pre-conceived scenario, we needed to facilitate a process where participants could express their genuine concerns, aspirations, and imaginative projections about how digital government platforms might evolve. This required designing a research approach that balanced structure with creative freedom, enabling participants to co-create believable future scenarios while critically examining the implications of their visions.
-                    </p>
-                  </div>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        How do people envision the future of digital government technology? What hopes and fears do they harbor about increasingly centralized digital governance systems?
+                      </p>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        This research explored these questions through a co-design fiction approach—a participatory methodology that brings together researchers and participants to collectively imagine and design speculative futures. The challenge was to move beyond designer-centric speculation and instead create space for diverse voices to shape narratives about digital governance.
+                      </p>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        Rather than imposing a pre-conceived scenario, we needed to facilitate a process where participants could express their genuine concerns, aspirations, and imaginative projections about how digital government platforms might evolve. This required designing a research approach that balanced structure with creative freedom, enabling participants to co-create believable future scenarios while critically examining the implications of their visions.
+                      </p>
+                    </div>
+                  </Reveal>
 
                   {/* 💡 Approach */}
-                  <div className="space-y-3">
-                    <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                      Approach & Solution
-                    </h3>
+                  <Reveal>
+                    <div className="space-y-3">
+                      <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                        Approach & Solution
+                      </h3>
 
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      We conducted an immersive co-design fiction study with 4 participants, using a structured yet flexible methodology that combined narrative development with diegetic prototyping.
-                    </p>
-                    <h4 className="text-base font-semibold text-gray-800 mb-2">
-                      Research Approach:
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      The study employed semi-structured interviews within a co-design fiction framework. Rather than passively responding to questions, participants actively shaped the research direction by co-creating scenarios, sketching interfaces, and collectively reflecting on the implications of their designs.
-                    </p>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        We conducted an immersive co-design fiction study with 4 participants, using a structured yet flexible methodology that combined narrative development with diegetic prototyping.
+                      </p>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">
+                        Research Approach:
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        The study employed semi-structured interviews within a co-design fiction framework. Rather than passively responding to questions, participants actively shaped the research direction by co-creating scenarios, sketching interfaces, and collectively reflecting on the implications of their designs.
+                      </p>
 
-                    <h4 className="text-base font-semibold text-gray-800 mb-2">
-                      Shared Narrative Development:
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      Participants worked collaboratively to develop shared narratives about future digital government platforms. These narratives explored themes of convenience, surveillance, welfare distribution, and citizen-state relationships. The scenarios ranged from optimistic visions of accessible public services to cautionary tales of algorithmic control.
-                    </p>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">
+                        Shared Narrative Development:
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        Participants worked collaboratively to develop shared narratives about future digital government platforms. These narratives explored themes of convenience, surveillance, welfare distribution, and citizen-state relationships. The scenarios ranged from optimistic visions of accessible public services to cautionary tales of algorithmic control.
+                      </p>
 
-                    <h4 className="text-base font-semibold text-gray-800 mb-2">
-                      Diegetic Prototyping:
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      To make abstract concepts tangible, participants created artifacts that could exist within their imagined futures—sketches of interface designs, wireframes of government apps, and digital mockups of citizen-facing platforms. These prototypes served as thinking tools, helping participants explore and critique their own visions.
-                    </p>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">
+                        Diegetic Prototyping:
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        To make abstract concepts tangible, participants created artifacts that could exist within their imagined futures—sketches of interface designs, wireframes of government apps, and digital mockups of citizen-facing platforms. These prototypes served as thinking tools, helping participants explore and critique their own visions.
+                      </p>
 
-                    <h4 className="text-base font-semibold text-gray-800 mb-2">
-                      Collective Reflection:
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                      Throughout the process, participants engaged in reflective discussions about the scenarios they created. These conversations revealed underlying values, concerns about privacy and autonomy, hopes for societal support systems, and fears about surveillance and control mechanisms.
-                    </p>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">
+                        Collective Reflection:
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        Throughout the process, participants engaged in reflective discussions about the scenarios they created. These conversations revealed underlying values, concerns about privacy and autonomy, hopes for societal support systems, and fears about surveillance and control mechanisms.
+                      </p>
 
-                  </div>
-
+                    </div>
+                  </Reveal>
                 </div>
+
                 <div className="w-full my-16">
 
                   <div className="bg-white rounded-2xl shadow-md p-5 md:p-10">
@@ -502,15 +510,17 @@ export default function DesignPage() {
 
                     </div>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Key Outcomes & Impact</h2>
-                  <ul className="space-y-4">
-                    {keyoutcomes?.map((item, i) => (
-                      <li key={i} className="flex gap-3">
-                        <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
-                        <p className="text-gray-500 leading-relaxed text-base">{item}</p>
-                      </li>
-                    ))}
-                  </ul>
+                  <Reveal>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Key Outcomes & Impact</h2>
+                    <ul className="space-y-4">
+                      {keyoutcomes?.map((item, i) => (
+                        <li key={i} className="flex gap-3">
+                          <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
+                          <p className="text-gray-500 leading-relaxed text-base">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </Reveal>
 
                 </div>
               </div>

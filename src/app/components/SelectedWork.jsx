@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 export default function SelectedWork() {
     const projects = [
@@ -59,16 +60,21 @@ export default function SelectedWork() {
 
     return (
         <section className="w-full bg-[#f5f7fb] py-20 px-6">
+
             <div className="w-full max-w-7xl mx-auto">
 
                 {/* Header */}
+                
                 <div className="flex items-center justify-between mb-12">
+                    <Reveal>
                     <div>
                         <h2 className="text-3xl font-semibold text-[#0f172a]">
                             Selected Work
                         </h2>
                         <div className="w-18 h-[4px] bg-blue-600 mt-2 rounded-full"></div>
                     </div>
+                    </Reveal>
+
 
                     <Link
                         href="/projects"
@@ -80,6 +86,7 @@ export default function SelectedWork() {
                         </span>
                     </Link>
                 </div>
+
 
                 {/* Cards */}
                 <motion.div
@@ -143,6 +150,6 @@ export default function SelectedWork() {
                 </motion.div>
 
             </div>
-        </section>
+        </section >
     );
 }

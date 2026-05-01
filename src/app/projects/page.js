@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Reveal from "../components/Reveal";
 
 
@@ -41,7 +42,7 @@ const projects = [
     title:
       "Human Factors for Software Engineering & Human-System Interaction at DLR",
     description:
-      "Conducting human-centered research on collaborative and data-driven interactive systems.",
+      "Working on human-centered research for large-scale, data-driven platforms and safety-critical aerospace systems within the Institute of Software Technology.",
     image: "/images/professional-work.png",
     tags: [
       "HCI",
@@ -109,73 +110,79 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-     
-          <div className="mb-12">
 
-            <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
-              Portfolio
-            </span>
-            <h2 className="text-4xl font-bold mt-4 text-gray-900">
-              Work & Research
-            </h2>
-            <p className="text-gray-600 mt-3 max-w-xl">
-              A collection of projects exploring the intersection of human factors,
-              aerospace technology, and artificial intelligence.
-            </p>
+        <div className="mb-12">
 
-          </div>
-     
+          <span className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
+            Portfolio
+          </span>
+          <h2 className="text-4xl font-bold mt-4 text-gray-900">
+            Work & Research
+          </h2>
+          <p className="text-gray-600 mt-3 max-w-xl">
+            A collection of projects exploring the intersection of human factors,
+            aerospace technology, and artificial intelligence.
+          </p>
+
+        </div>
+
 
 
         {/* Cards */}
-
         <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project) => (
-       
-            <Link key={project.id} href={`/projects/${project.id}`}>
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }} // all come from bottom
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.8,
+                delay: i * 0.2, // 👈 this creates the "one by one" effect
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <Link href={`/projects/${project.id}`}>
+                <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
 
-              <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                    />
+                  </div>
 
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                  />
-                </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <p className="text-xs text-blue-600 font-semibold">
+                      {project.type} • {project.year}
+                    </p>
 
-                <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-lg font-bold mt-2 text-gray-900 min-h-[48px] transition-colors duration-300 group-hover:text-blue-600">
+                      {project.title}
+                    </h3>
 
-                  <p className="text-xs text-blue-600 font-semibold">
-                    {project.type} • {project.year}
-                  </p>
+                    <p className="text-gray-600 text-sm mt-2 min-h-[60px]">
+                      {project.description}
+                    </p>
 
-                  <h3 className="text-lg font-bold mt-2 text-gray-900 min-h-[48px] transition-colors duration-300 group-hover:text-blue-600">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-sm mt-2 min-h-[60px] transition-colors duration-300">
-                    {project.description}
-                  </p>
-
-                  <div className="mt-auto">
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {project.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="text-xs bg-gray-100 text-black px-2 py-1 rounded-full transition-colors duration-300 group-hover:bg-blue-100 group-hover:text-blue-600"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="mt-auto">
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {project.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="text-xs bg-gray-100 text-black px-2 py-1 rounded-full group-hover:bg-blue-100 group-hover:text-blue-600 transition"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
                 </div>
-              </div>
-
-            </Link>
-        
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
