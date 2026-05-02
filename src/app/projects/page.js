@@ -113,7 +113,7 @@ export default function ProjectsSection() {
 
         <div className="mb-12">
 
-          <span className="text-sm bg-blue-100 text-[#155DFC] px-3 py-1 rounded-full">
+          <span className="text-sm font-medium bg-blue-100 text-[#155DFC] px-3 py-2 border border-blue-300 rounded-full">
             Portfolio
           </span>
           <h2 className="text-4xl font-bold mt-4 text-gray-900">
@@ -145,17 +145,31 @@ export default function ProjectsSection() {
               <Link href={`/projects/${project.id}`}>
                 <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
 
-                  <div className="h-48 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden group cursor-pointer">
+
+                    {/* Image */}
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                     />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-white/10 transition duration-300"></div>
+
+                    {/* View Details button */}
+                    <div className="absolute top-3 right-3 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+                      <span className="bg-white/90 backdrop-blur-md text-black px-3 py-1 rounded-full text-xs font-medium shadow">
+                        View Details
+                      </span>
+                    </div>
+
                   </div>
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <p className="text-xs text-[#155DFC] font-semibold">
-                      {project.type} • {project.year}
+                    <p className="text-xs font-semibold">
+                      <span className="text-[#155DFC]">{project.type}</span>{" "}
+                      <span className="text-[#90A1B9]">• {project.year}</span>
                     </p>
 
                     <h3 className="text-lg font-bold mt-2 text-gray-900 min-h-[48px] transition-colors duration-300 group-hover:text-[#155DFC]">
@@ -171,7 +185,7 @@ export default function ProjectsSection() {
                         {project.tags.map((tag, index) => (
                           <span
                             key={index}
-                            className="text-xs bg-gray-100 text-black px-2 py-1 rounded-full group-hover:bg-blue-100 group-hover:text-[#155DFC] transition"
+                            className="text-xs bg-[#F1F5F9] text-black px-2 py-1 rounded-full group-hover:bg-blue-100 group-hover:text-[#155DFC] transition"
                           >
                             {tag}
                           </span>

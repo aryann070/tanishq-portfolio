@@ -19,14 +19,14 @@ export default function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 20);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
 
@@ -47,7 +47,7 @@ useEffect(() => {
             >
               Portfolio
               <span className={isProjectsPage ? "text-black" : "text-white"}>
-                .
+                {" "}.
               </span>
             </h1>
           </Link>
@@ -89,7 +89,7 @@ useEffect(() => {
             </Link>
 
             <Link
-              href="#experience"
+              href="/#experience"
               className={`px-6 py-2 rounded-full font-semibold transition ${isProjectsPage
                 ? "bg-white text-black shadow-sm"
                 : "bg-white text-black hover:scale-105"
@@ -114,23 +114,27 @@ useEffect(() => {
       </NavAnimation>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
       >
         <div
-          className={`px-4 sm:px-6 pb-6 pt-2 flex flex-col gap-5 font-medium ${isProjectsPage
-            ? "bg-gray-200 text-black"
-            : "bg-[#030814] text-white"
+          className={`px-4 sm:px-6 pb-10 pt-6 flex flex-col items-center justify-center gap-8 font-medium ${isProjectsPage
+            ? "bg-white text-black"
+            : "bg-gradient-to-r from-[#0b1a3a]/90 via-[#07122b]/90 to-[#030814]/90 text-white"
             }`}
         >
-          <Link href="/" onClick={() => setOpen(false)} className="py-1">
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            className="text-xl"
+          >
             Home
           </Link>
 
           <Link
             href="/projects"
             onClick={() => setOpen(false)}
-            className="py-1"
+            className="text-xl"
           >
             Projects
           </Link>
@@ -138,14 +142,16 @@ useEffect(() => {
           <Link
             href="#contact"
             onClick={() => setOpen(false)}
-            className="py-1"
+            className="text-xl"
           >
             Contact
           </Link>
 
           <Link
             href="#experience"
-            className="bg-white text-black px-6 py-2 rounded-full font-semibold w-fit mt-2">
+            onClick={() => setOpen(false)}
+            className="mt-6 bg-gray-200 text-black px-12 py-4 rounded-full font-semibold text-lg shadow-md"
+          >
             Resume
           </Link>
         </div>

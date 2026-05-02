@@ -154,10 +154,10 @@ export default function DesignPage() {
             <div className="w-full max-w-5xl mx-auto mt-10">
 
               {/* 🔘 Tabs */}
-              <div className="flex gap-6 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6 mb-8">
                 <button
                   onClick={() => setActiveTab("people")}
-                  className={`flex-1 px-10 py-5 rounded-2xl text-lg border border-gray-300 font-semibold transition ${activeTab === "people"
+                  className={`w-full md:flex-1 px-6 md:px-10 py-2  rounded-2xl text-base border border-gray-300 font-semibold transition ${activeTab === "people"
                       ? "bg-blue-600 text-white shadow-lg"
                       : "bg-white text-gray-700"
                     }`}
@@ -167,7 +167,7 @@ export default function DesignPage() {
 
                 <button
                   onClick={() => setActiveTab("govnet")}
-                  className={`flex-1 px-10 py-5 rounded-2xl text-lg border border-gray-300 font-semibold transition ${activeTab === "govnet"
+                  className={`w-full md:flex-1 px-6 md:px-10 py-2 rounded-2xl text-base  border border-gray-300 font-semibold transition ${activeTab === "govnet"
                       ? "bg-blue-600 text-white shadow-lg"
                       : "bg-white text-gray-700"
                     }`}
@@ -247,7 +247,7 @@ export default function DesignPage() {
 
                 {/* 🔵 Top Info Box */}
                 <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-indigo-200 text-gray-700 rounded-xl p-5 text-sm leading-relaxed">
-                 A co-design fiction research study exploring people's hopes and fears about digital government technology through collaborative scenario building.
+                  A co-design fiction research study exploring people's hopes and fears about digital government technology through collaborative scenario building.
                 </div>
 
                 {/* 📦 Grid Cards */}
@@ -255,7 +255,7 @@ export default function DesignPage() {
 
                   {/* 🎥 Video 1 */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-bold text-gray-900">
                       Behavior Monitoring & Penalty System
                     </h3>
                     <p className="text-sm text-[#45556C]">
@@ -274,7 +274,7 @@ export default function DesignPage() {
 
                   {/* 🎥 Video 2 */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-bold text-gray-900">
                       Reward & Punishment in Civic Behavior
                     </h3>
                     <p className="text-sm text-[#45556C]">
@@ -293,7 +293,7 @@ export default function DesignPage() {
 
                   {/* 🧪 Prototype */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-bold text-gray-900">
                       Diegetic Prototype
                     </h3>
                     <p className="text-sm text-[#45556C]">
@@ -312,7 +312,7 @@ export default function DesignPage() {
 
                   {/* 📄 Documentation */}
                   <div className="bg-white rounded-2xl shadow-md p-5 space-y-4">
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-bold text-gray-900">
                       Project Documentation
                     </h3>
                     <p className="text-sm text-[#45556C]">

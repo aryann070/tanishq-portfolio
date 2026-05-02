@@ -275,7 +275,7 @@ export default function ProjectDetailsClient({ project }) {
               {project.id === "immersive-research" && (
                 <section className="mb-12">
                   {/* Section Title */}
-                  <h2 className="text-2xl font-semibold text-[#0F172B] mb-4">
+                  <h2 className="text-2xl font-bold text-[#0F172B] mb-4">
                     Approach & Solution
                   </h2>
 
@@ -334,7 +334,7 @@ export default function ProjectDetailsClient({ project }) {
 
 
             {project?.id == "human-factors-dlr" && project?.experienceCard1 && (
-              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
+              <section className="bg-white rounded-2xl shadow-md overflow-hidden mb-10 max-w-5xl">
 
                 {/* Header */}
                 <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-5 flex items-start gap-3">
@@ -390,7 +390,7 @@ export default function ProjectDetailsClient({ project }) {
             )}
 
             {project?.id == "human-factors-dlr" && project?.experienceCard2 && (
-              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
+              <section className="bg-white rounded-2xl shadow-md overflow-hidden mb-10 max-w-5xl">
 
                 {/* Header */}
                 <div className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-5 flex items-start gap-3">
@@ -446,7 +446,7 @@ export default function ProjectDetailsClient({ project }) {
 
 
             {project?.id == "human-factors-dlr" && project?.experienceCard3 && (
-              <section className="bg-white rounded-2xl shadow-md border overflow-hidden mb-10 max-w-5xl">
+              <section className="bg-white rounded-2xl shadow-md  overflow-hidden mb-10 max-w-5xl">
 
                 {/* Header */}
                 <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-6 py-5 flex items-start gap-3">
@@ -566,7 +566,7 @@ export default function ProjectDetailsClient({ project }) {
                   </div>
 
                   {/* Domain */}
-                  <div className="bg-white rounded-xl shadow-sm p-4 text-center border">
+                  <div className="bg-white rounded-xl shadow-sm p-4 text-center">
                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600">
                       <Database size={25} />
                     </div>
@@ -610,7 +610,7 @@ export default function ProjectDetailsClient({ project }) {
                           <div className="text-white">
                             {isFirst ? <Volume2 size={18} /> : <MessageSquare size={18} />}
                           </div>
-                          <h3 className="text-lg font-semibold text-white">
+                          <h3 className="text-lg font-bold text-white">
                             {item.title}
                           </h3>
                         </div>
@@ -784,12 +784,12 @@ export default function ProjectDetailsClient({ project }) {
                   </h2>
                   {Array.isArray(project.approaches) ? (
                     project.approaches.map((para, i) => (
-                      <p key={i} className="text-gray-500 leading-relaxed text-base">
+                      <p key={i} className="text-[#45556C] leading-relaxed text-base">
                         {para}
                       </p>
                     ))
                   ) : (
-                    <p className="text-gray-500 leading-relaxed text-base">
+                    <p className="text-[#45556C] leading-relaxed text-base">
                       {project.approaches}
                     </p>
                   )}
@@ -848,7 +848,7 @@ export default function ProjectDetailsClient({ project }) {
             )}
 
             {project.id === "protrack-athlete-performance" && project.interactivePrototype && (
-              <section className="bg-[#f5f7fb]">
+              <section>
 
                 {/* Title */}
                 <h2 className="text-2xl font-semibold text-[#0F172B] mb-4">

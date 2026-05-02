@@ -59,20 +59,20 @@ export default function SelectedWork() {
     };
 
     return (
-        <section className="w-full bg-[#f5f7fb] py-20 px-6">
+        <section className="w-full bg-[#F8FAFC] py-20 px-6">
 
             <div className="w-full max-w-7xl mx-auto">
 
                 {/* Header */}
-                
+
                 <div className="flex items-center justify-between mb-12">
                     <Reveal>
-                    <div>
-                        <h2 className="text-3xl font-semibold text-[#0f172a]">
-                            Selected Work
-                        </h2>
-                        <div className="w-18 h-[4px] bg-blue-600 mt-2 rounded-full"></div>
-                    </div>
+                        <div>
+                            <h2 className="text-3xl font-bold text-[#0f172a]">
+                                Selected Work
+                            </h2>
+                            <div className="w-18 h-[4px] bg-blue-600 mt-2 rounded-full"></div>
+                        </div>
                     </Reveal>
 
 
@@ -105,14 +105,26 @@ export default function SelectedWork() {
                             >
                                 <div className="h-full flex flex-col cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden group">
 
-                                    {/* Image */}
-                                    <div className="relative w-full h-56 flex-shrink-0">
+                                    <div className="relative w-full h-56 flex-shrink-0 group overflow-hidden cursor-pointer">
+
+                                        {/* Image */}
                                         <Image
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover transition duration-300 group-hover:scale-105"
                                         />
+
+                                        {/* Dark overlay */}
+                                        <div className="absolute inset-0 bg-black/10 group-hover:bg-white/10 transition duration-300"></div>
+
+                                        {/* View Details button (hidden → visible on hover) */}
+                                        <div className="absolute top-3 right-3 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+                                            <span className="bg-white/90 backdrop-blur-md text-black px-3 py-1 rounded-full text-xs font-medium shadow">
+                                                View Details
+                                            </span>
+                                        </div>
+
                                     </div>
 
                                     {/* Content */}
@@ -122,8 +134,13 @@ export default function SelectedWork() {
                                             {project.category}
                                         </p>
 
-                                        <h3 className="text-lg font-semibold text-[#0f172a] mb-3 line-clamp-2 group-hover:text-[#155DFC] transition-colors duration-300">
-                                            {project.title}
+
+                                        <h3 className="text-xl font-bold text-[#0f172a] mb-3 group-hover:text-[#155DFC] transition-colors duration-300 flex items-center">
+                                            <span>{project.title}</span>
+
+                                            {/* <span className="ml-2 opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                                →
+                                            </span> */}
                                         </h3>
 
                                         <p className="text-gray-500 text-sm mb-4 line-clamp-3">
@@ -134,7 +151,7 @@ export default function SelectedWork() {
                                             {project.tags.map((tag, i) => (
                                                 <span
                                                     key={i}
-                                                    className="text-xs px-3 py-1 rounded-full bg-gray-100 text-black"
+                                                    className="text-xs px-3 py-1 rounded-full bg-[#F1F5F9] text-black"
                                                 >
                                                     {tag}
                                                 </span>

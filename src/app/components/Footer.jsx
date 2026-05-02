@@ -19,12 +19,12 @@ export default function Footer() {
       >
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+        <h2 className="text-3xl font-bold mb-6">
           Let's Collaborate
         </h2>
 
         {/* Description */}
-        <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-[#90A1B9] text-lg leading-relaxed max-w-2xl mx-auto">
           I am actively looking for PhD opportunities in Human-AI Collaboration
           and HCI. If you have a position available or want to discuss my
           research, please reach out.

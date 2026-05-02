@@ -39,7 +39,7 @@ export default function Hero() {
 
         {/* Badge */}
         <motion.div variants={item} className="mb-6">
-          <span className="inline-block px-5 py-2 rounded-full border border-blue-400/30 bg-blue-500/10 text-sm text-blue-200">
+          <span className="inline-block font-medium px-5 py-2 rounded-full border border-blue-400/30 bg-blue-500/10 text-sm text-[#8EC5FF]">
             Active Candidate for PhD Positions in HCI & Human-AI Collaboration
           </span>
         </motion.div>
@@ -63,7 +63,7 @@ export default function Hero() {
         {/* Description */}
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-gray-300 text-xl leading-relaxed"
+          className="mt-6 max-w-2xl text-[#CAD5E2] text-lg leading-relaxed"
         >
           Currently, I bridge the gap between complex aerospace technologies and human
           intuition. Currently researching Human Factors at{" "}

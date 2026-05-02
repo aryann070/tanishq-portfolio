@@ -68,7 +68,7 @@ export default function ExperienceEducation() {
   ];
 
   return (
-    <section id="experience" className="bg-[#f8fafc] py-24 px-4 md:px-10 lg:px-20 w-full">
+    <section id="experience" className="bg-[#ffffff] py-24 px-4 md:px-10 lg:px-20 w-full">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -83,11 +83,12 @@ export default function ExperienceEducation() {
               ease: [0.22, 1, 0.36, 1],        // smooth
             }}
           >
-            <h2 className="text-4xl font-bold text-[#0f172a] mb-4">
-              Experience & Education
+            <h2 className="text-3xl font-bold text-[#0f172a] mb-4">
+              Experience &<br />
+              Education
             </h2>
 
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-base text-[#45556C] leading-relaxed mb-6  max-w-lg">
               My background combines rigorous engineering principles with user-centered design, spanning diverse domains from aerospace systems to speculative design and everyday interactions.
             </p>
 
@@ -130,7 +131,7 @@ export default function ExperienceEducation() {
                   <div className="flex flex-col md:flex-row md:justify-between w-full gap-2">
 
                     <div className="max-w-lg">
-                      <h3 className="text-lg font-semibold text-[#0f172a]">
+                      <h3 className="text-lg font-bold text-[#0f172a]">
                         {itemData.title}
                       </h3>
 
@@ -138,7 +139,7 @@ export default function ExperienceEducation() {
                         {itemData.org}
                       </p>
 
-                      <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                      <p className="text-[#45556C] text-sm mt-2 leading-relaxed">
                         {itemData.desc}
                       </p>
                       {itemData.link && (
@@ -180,7 +181,7 @@ export default function ExperienceEducation() {
               }}
             >
               <div>
-                <h3 className="text-xl font-semibold text-[#0f172a] mb-6">
+                <h3 className="text-xl font-bold text-[#0f172a] mb-6">
                   Technical & Research Skills
                 </h3>
 
@@ -206,7 +207,7 @@ export default function ExperienceEducation() {
                       ].map((skill, i) => (
                         <span
                           key={i}
-                          className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
+                          className="bg-[#F1F5F9] text-gray-700 text-sm px-3 py-1 rounded-lg"
                         >
                           {skill}
                         </span>
@@ -235,7 +236,7 @@ export default function ExperienceEducation() {
                       ].map((skill, i) => (
                         <span
                           key={i}
-                          className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-lg"
+                          className="bg-[#F1F5F9] text-gray-700 text-sm px-3 py-1 rounded-lg"
                         >
                           {skill}
                         </span>
