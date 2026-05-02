@@ -32,7 +32,7 @@
 //         {/* Back */}
 //         <Link
 //           href="/projects"
-//           className="flex items-center gap-2 text-base text-gray-500 hover:text-blue-600 transition"
+//           className="flex items-center gap-2 text-base text-gray-500 hover:text-[#155DFC] transition"
 //         >
 //           <BsArrowLeft size={14} />
 //           Back to All Projects
@@ -41,7 +41,7 @@
 //         {/* Header */}
 //         <div className="mt-6 max-w-5xl">
 //           <div className="flex items-center gap-2 text-sm">
-//             <span className="bg-blue-100 text-blue-600 font-semibold px-3 py-0.5 rounded-full">
+//             <span className="bg-blue-100 text-[#155DFC] font-semibold px-3 py-0.5 rounded-full">
 //               {project.category}
 //             </span>
 //             <span className="text-gray-400">|</span>
@@ -528,7 +528,7 @@
 
 //                   {/* Theoretical Grounding */}
 //                   <div className="bg-white rounded-xl shadow-sm p-4 text-center">
-//                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-blue-100 text-blue-600">
+//                     <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full  bg-blue-100 text-[#155DFC]">
 //                       <BookOpen size={25} />
 //                     </div>
 //                     <h3 className="text-sm text-gray-900 font-semibold mb-2 ">Theoretical Grounding</h3>
@@ -652,7 +652,7 @@
 
 //                       if (item.title === "Transparency") {
 //                         icon = <Eye size={18} />;
-//                         style = "bg-blue-100 text-blue-600";
+//                         style = "bg-blue-100 text-[#155DFC]";
 //                       } else if (item.title === "Progressive Disclosure") {
 //                         icon = <Layers size={18} />;
 //                         style = "bg-purple-100 text-purple-600";
@@ -729,7 +729,7 @@
 //                       key={i}
 //                       className="bg-gray-100 rounded-xl py-4 text-center"
 //                     >
-//                       <h4 className="text-blue-600 font-semibold">
+//                       <h4 className="text-[#155DFC] font-semibold">
 //                         {item.label}
 //                       </h4>
 //                       <p className="text-xs text-gray-500">

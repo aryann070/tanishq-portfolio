@@ -78,7 +78,7 @@ export default function SelectedWork() {
 
                     <Link
                         href="/projects"
-                        className="hidden md:inline-block text-blue-600 text-lg  font-medium"
+                        className="hidden md:inline-block text-[#155DFC] text-base  font-medium hover:text-blue-800"
                     >
                         <span className="flex items-center gap-1">
                             View All Projects
@@ -118,11 +118,11 @@ export default function SelectedWork() {
                                     {/* Content */}
                                     <div className="group p-6 flex flex-col flex-grow">
 
-                                        <p className="text-xs text-blue-600 font-semibold mb-3">
+                                        <p className="text-xs text-[#155DFC] font-semibold mb-3">
                                             {project.category}
                                         </p>
 
-                                        <h3 className="text-lg font-semibold text-[#0f172a] mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                                        <h3 className="text-lg font-semibold text-[#0f172a] mb-3 line-clamp-2 group-hover:text-[#155DFC] transition-colors duration-300">
                                             {project.title}
                                         </h3>
 

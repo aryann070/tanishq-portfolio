@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -17,13 +17,24 @@ export default function Navbar() {
     return pathname === path;
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
 
     <nav
       className={`sticky top-0 w-full z-50 backdrop-blur-md ${isProjectsPage
-        ? "bg-gray-200/90"
+        ? "bg-[#F8FAFC]"
         : "bg-gradient-to-r from-[#0b1a3a]/90 via-[#07122b]/90 to-[#030814]/90"
-        } shadow-sm`}
+        }`}
     >
       <NavAnimation>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:pl-2 lg:pr-8 py-4 flex items-center justify-between">
@@ -31,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <h1
-              className={`text-xl font-semibold ${isProjectsPage ? "text-blue-600" : "text-blue-400"
+              className={`text-lg font-bold ${isProjectsPage ? "text-[#155DFC]" : "text-blue-400"
                 }`}
             >
               Portfolio
@@ -43,14 +54,14 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div
-            className={`hidden md:flex items-center gap-10 font-medium ${isProjectsPage ? "text-gray-600" : "text-white"
+            className={`hidden md:flex items-center gap-10 font-medium ${isProjectsPage ? "text-[#CAD5E2]" : "text-white"
               }`}
           >
             <Link
               href="/"
               className={`transition ${isProjectsPage
                 ? isActive("/")
-                  ? "text-blue-600"
+                  ? "text-[#155DFC]"
                   : "hover:text-blue-500"
                 : "hover:text-gray-300"
                 }`}
@@ -62,7 +73,7 @@ export default function Navbar() {
               href="/projects"
               className={`transition ${isProjectsPage
                 ? isActive("/projects")
-                  ? "text-blue-600"
+                  ? "text-[#155DFC]"
                   : "hover:text-blue-500"
                 : "hover:text-gray-300"
                 }`}

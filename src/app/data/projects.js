@@ -11,7 +11,7 @@ export const projects = [
       "AI Assisted Electronic Laboratory Notebook",
 
     role: "Student",
-    team: "Prof. Robin Neuhaus (Supervisor)",
+    team: ["Prof. Dr. Markus Rohde","Prof. Dr. Shadan Sadeghian","Dr. Ing. Sabine Theis (DLR)"],
     icons: ["/icons/mic.png", "/icons/brain.png", "/icons/database.png"],
     tools: [
       "Figma",

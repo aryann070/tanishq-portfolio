@@ -1,5 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
+import Link from "next/link";
 
 const container = {
   hidden: {},
@@ -43,7 +45,7 @@ export default function ExperienceEducation() {
       org: "DLR - German Aerospace Center",
       duration: "June 2024 – Present",
       desc: "Designing solutions for human-system interaction and human factors in space technology. Conducting user research for mission control interfaces and pilot support systems.",
-      link: true,
+      link: "/projects/human-factors-dlr",
     },
     {
       title: "Intern Research Assistant",
@@ -90,10 +92,10 @@ export default function ExperienceEducation() {
             </p>
 
             <a
-              href="/pdf/tanishq_cv.pdf"  
+              href="/pdf/tanishq_cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 font-medium hover:underline"
+              className="text-[#155DFC] font-medium hover:underline"
             >
               Request Detailed Experience Record (CV/Resume)
             </a>
@@ -132,16 +134,31 @@ export default function ExperienceEducation() {
                         {itemData.title}
                       </h3>
 
-                      <p className="text-blue-600 text-sm font-medium">
+                      <p className="text-[#155DFC] text-sm font-medium">
                         {itemData.org}
                       </p>
 
                       <p className="text-gray-600 text-sm mt-2 leading-relaxed">
                         {itemData.desc}
                       </p>
+                      {itemData.link && (
+                        <a
+                          href={itemData.link}
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-[#155DFC] hover:text-blue-800 cursor-pointer"
+                        >
+                          View Related Project
+                          <FiArrowRight size={14} />
+                        </a>
+                      )}
                     </div>
 
-                    <span className="text-sm text-gray-500 whitespace-nowrap md:text-right">
+
+
+                    <span
+                      className="text-sm text-gray-500 whitespace-nowrap md:text-right"
+                      style={{ fontFamily: "Menlo, Menlo, monospace" }}
+                    >
                       {itemData.duration}
                     </span>
 
