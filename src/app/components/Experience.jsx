@@ -68,7 +68,7 @@ export default function ExperienceEducation() {
   ];
 
   return (
-    <section id="experience" className="bg-[#ffffff] py-24 px-4 md:px-10 lg:px-20 w-full">
+    <section id="experience"  className="bg-[#ffffff] py-24 px-4 md:px-10 lg:px-20 w-full scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-12">
