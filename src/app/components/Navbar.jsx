@@ -33,7 +33,7 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 w-full z-50 backdrop-blur-md ${isProjectsPage
         ? "bg-[#F8FAFC]"
-        : "bg-gradient-to-r from-[#0b1a3a]/90 via-[#07122b]/90 to-[#030814]/90"
+        : "bg-gradient-to-r from-[#0b1a3a] via-[#07122b] to-[#030814]"
         }`}
     >
       <NavAnimation>
