@@ -368,7 +368,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3 mb-6">
                     {project.experienceCard1.whatIDid?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-blue-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-blue-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -379,7 +379,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3">
                     {project.experienceCard1.impact?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-green-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -422,7 +422,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3 mb-6">
                     {project.experienceCard2.whatIDid?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-purple-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-purple-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -433,7 +433,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3">
                     {project.experienceCard2.impact?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-green-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -478,7 +478,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3 mb-6">
                     {project.experienceCard3.whatIDid?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-gray-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-gray-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -489,7 +489,7 @@ export default function ProjectDetailsClient({ project }) {
                   <ul className="space-y-3">
                     {project.experienceCard3.impact?.map((item, i) => (
                       <li key={i} className="flex gap-3 text-sm text-[#45556C]">
-                        <BsCheckCircle className="text-green-500 mt-[2px]" size={16} />
+                        <BsCheckCircle className="text-green-500 mt-[2px] shrink-0" size={16} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -871,7 +871,7 @@ export default function ProjectDetailsClient({ project }) {
               <ul className="space-y-4">
                 {project.outcomes?.map((item, i) => (
                   <li key={i} className="flex gap-3">
-                    <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={18} />
+                    <BsCheckCircle className="text-green-500 mt-1 shrink-0" size={16} />
                     <p className="text-gray-500 leading-relaxed text-base">{item}</p>
                   </li>
                 ))}
